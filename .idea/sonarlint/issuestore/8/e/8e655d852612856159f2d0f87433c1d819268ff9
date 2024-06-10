@@ -1,0 +1,24 @@
+
+ï	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ö◊È≤J$394b789d-d6ae-4f45-a062-d88a03972160
+ã
+java:S20954"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(≥ù÷ÀJ$dc136fd2-7959-4213-ba1c-c6f2f82c26f0
+n
+java:S1172%"2Remove this unused method parameter "actionEvent".(√ã€”J$e0718883-3732-4230-948a-a4d0969c002f
+x
+java:S1117E"<Rename "rootNode" which hides the field declared at line 34.(ÿÑ®îJ$8562407f-b967-4a0e-82eb-fff2111a59a1
+n
+java:S1172O"2Remove this unused method parameter "actionEvent".(åÊ—µJ$6acd01f4-a86a-46b8-9ba1-20aa4c8471ab
+x
+java:S1117P"<Rename "rootNode" which hides the field declared at line 34.(àÍ˙∞J$20bfca42-0a6d-4322-9e87-e749749b7a07
+j
+java:S1172["/Remove this unused method parameter "keyEvent".(ï∞“!J$e7cbdf98-77bd-456f-be9a-71a763c427e7
+k
+java:S1172_"/Remove this unused method parameter "keyEvent".(‡ÒÙÅJ$9a31f0a2-fc83-41df-b7ff-62963af756f8
+}
+java:S1126d"AReplace this if-then-else statement by a single return statement.(“‡‰•J$77cc205d-ccb9-4741-bcb2-c418251f819d
+{
+java:S1128"?Remove this unused import 'javafx.scene.control.PasswordField'.(Í˙¥ÀJ$88b3138c-cfec-4311-a3a4-85906b1ec101
+t
+java:S1128"3Remove this unused import 'javafx.scene.text.Text'.(òˇá‹˛ˇˇˇˇJ$607fb9e9-eb8d-4bc9-b2f2-ee181600085e
+s
+java:S1128"0Remove this unused import 'java.sql.Connection'.(•ÀÙ÷8€∞œòÄ2J$fe482556-933c-4f9a-ae1e-264186595176

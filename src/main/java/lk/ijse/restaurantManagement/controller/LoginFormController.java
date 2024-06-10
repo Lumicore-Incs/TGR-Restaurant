@@ -48,9 +48,8 @@ public class LoginFormController {
     }
 
     private void checkCredential(String userId, String password) throws SQLException, IOException {
-        String sql = "SELECT userId, password FROM users WHERE userId = ?";
-        Connection connection = DbConnection.getInstance().getConnection();
-        PreparedStatement pstm = connection.prepareStatement(sql);
+        String sql = "SELECT userName, password FROM users WHERE userName = ?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
         pstm.setObject(1, userId);
         ResultSet resultSet = pstm.executeQuery();
 
@@ -90,14 +89,14 @@ public class LoginFormController {
     }
 
     public void txtUsernameOnKeyReleased(KeyEvent keyEvent) {
-        Regex.setTextColor(TextField.ID,txtUserId);
+        Regex.setTextColor(TextField.NAME,txtUserId);
     }
 
     public void txtpwOnKeyReleased(KeyEvent keyEvent) {
         Regex.setTextColor(TextField.PW,txtPassword);
     }
     public boolean isValidate(){
-        if(!Regex.setTextColor(TextField.ID,txtUserId))return false;
+        if(!Regex.setTextColor(TextField.NAME,txtUserId))return false;
         if(!Regex.setTextColor(TextField.PW,txtPassword))return false;
         return true;
     }
