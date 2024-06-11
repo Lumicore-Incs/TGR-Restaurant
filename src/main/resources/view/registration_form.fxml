@@ -3,7 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantManagement.controller.RegisterFormController">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.RegisterFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="702.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
       <ImageView fitHeight="733.0" fitWidth="515.0" layoutX="469.0" layoutY="-95.0" pickOnBounds="true" preserveRatio="true">
@@ -20,15 +20,7 @@
             <Image url="@../assets.icon/stories-unsplash.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="80.0" layoutX="893.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets.icon/food-png-6.png" />
-         </image>
-         <effect>
-            <ColorAdjust contrast="0.15" hue="1.0" />
-         </effect>
-      </ImageView>
-      <Label layoutX="699.0" layoutY="36.0" prefHeight="26.0" prefWidth="178.0" text="Cinnamon-7" textFill="WHITE">
+      <Label layoutX="595.0" layoutY="36.0" prefHeight="45.0" prefWidth="282.0" text="The Monarch Reign" textFill="WHITE">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -79,5 +71,13 @@
             <Font size="18.0" />
          </font>
       </JFXTextField>
+      <ImageView fitHeight="88.0" fitWidth="110.0" layoutX="870.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets.icon/logo.png" />
+         </image>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </ImageView>
    </children>
 </AnchorPane>
