@@ -1,0 +1,13 @@
+
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û„Ğ¡ûÿÿÿÿ
+a	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÿœ@
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‹ƒÕí
+O
+java:S1118
+":Add a private constructor to hide the implicit public one.(ÿœ@
+S
+java:S1854"8Remove this useless assignment to local variable "Date".(Û„Ğ¡ûÿÿÿÿ
+D
+java:S1481")Remove this unused "Date" local variable.(Û„Ğ¡ûÿÿÿÿ

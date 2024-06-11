@@ -44,7 +44,7 @@ public class EmployeeRepo {
         pstm.setObject(2, employee.getName());
         pstm.setObject(3, employee.getAddress());
         pstm.setObject(4, employee.getContact());
-        pstm.setObject(5, employee.getPositon());
+        pstm.setObject(5, employee.getPosition());
         pstm.setObject(6, employee.getBasicSalary());
 
         return pstm.executeUpdate() > 0;
@@ -84,7 +84,7 @@ public class EmployeeRepo {
         pstm.setObject(1, employee.getEmployeeId());
         pstm.setObject(2, employee.getName());
         pstm.setObject(3, employee.getAddress());
-        pstm.setObject(4, employee.getPositon());
+        pstm.setObject(4, employee.getPosition());
         pstm.setObject(5, employee.getBasicSalary());
         pstm.setObject(6, employee.getContact());
 
@@ -126,11 +126,31 @@ public class EmployeeRepo {
         ResultSet resultSet = pstm.executeQuery();
 
         int employeeCount = 0;
-        if(resultSet.next()) {
+        if (resultSet.next()) {
             employeeCount = resultSet.getInt("employee_count");
         }
         return employeeCount;
     }
+
+    public static Employee searchById(String employeeId) throws SQLException {
+        String sql = "SELECT * from Employee where employeeId=?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setObject(1, employeeId);
+        ResultSet resultSet = pstm.executeQuery();
+        Employee employee = null;
+        if (resultSet.next()) {
+            employee = new Employee(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6)
+            );
+        }
+        return employee;
+    }
+
     public String autoGenarateEmployeeId() throws SQLException {
         String sql = "SELECT employeeId from Employee order by employeeId desc limit 1";
         PreparedStatement pstm = DbConnection.getInstance().getConnection()

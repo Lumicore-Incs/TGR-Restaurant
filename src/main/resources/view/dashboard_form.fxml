@@ -4,7 +4,6 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.DashboardFormController">
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.DashboardFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
       <ImageView fitHeight="800.0" fitWidth="1000.0" layoutY="-97.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
@@ -40,12 +39,12 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" green="0.6527777910232544" blue="0.3055555522441864" />
+                        <Color blue="0.3055555522441864" green="0.6527777910232544" red="1.0" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="0.5071429014205933" />
+                        <Color green="0.5071429014205933" red="1.0" />
                      </color>
                   </Stop>
                </stops>
@@ -63,12 +62,12 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color red="1.0" green="0.35686275362968445" />
+                        <Color green="0.35686275362968445" red="1.0" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="1.0" green="0.3686274588108063" blue="0.29019609093666077" />
+                        <Color blue="0.29019609093666077" green="0.3686274588108063" red="1.0" />
                      </color>
                   </Stop>
                </stops>
@@ -91,12 +90,12 @@
                <stops>
                   <Stop>
                      <color>
-                        <Color red="0.5982577800750732" green="0.737913191318512" blue="0.8026315569877625" />
+                        <Color blue="0.8026315569877625" green="0.737913191318512" red="0.5982577800750732" />
                      </color>
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.6041398644447327" green="0.4399999976158142" blue="1.0" />
+                        <Color blue="1.0" green="0.4399999976158142" red="0.6041398644447327" />
                      </color>
                   </Stop>
                </stops>
@@ -108,15 +107,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <ImageView fitHeight="69.0" fitWidth="59.0" layoutX="911.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets.icon/food-png-6.png" />
-         </image>
-         <effect>
-            <ColorAdjust contrast="0.15" hue="1.0" />
-         </effect>
-      </ImageView>
-      <Label layoutX="746.0" layoutY="20.0" prefHeight="40.0" prefWidth="173.0" text="Cinnamon-7" textFill="WHITE">
+      <Label layoutX="653.0" layoutY="20.0" prefHeight="40.0" prefWidth="259.0" text="The Monarch Reign" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>
@@ -160,5 +151,10 @@
             <Font name="System Bold" size="72.0" />
          </font>
       </Label>
+      <ImageView fitHeight="73.0" fitWidth="95.0" layoutX="912.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets.icon/logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

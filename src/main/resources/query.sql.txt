@@ -125,7 +125,7 @@ foreign key(employeeId) references Employee(employeeId) on update cascade on del
 
 
 create table Salary(
-salaryId int not null auto_increment primary key,
+salaryId varchar(10) primary key,
 employeeId varchar (10),
 amount decimal (12),
 date varchar (15),

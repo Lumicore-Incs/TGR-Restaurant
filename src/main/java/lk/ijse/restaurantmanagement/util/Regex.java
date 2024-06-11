@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 public class Regex  {
     public static boolean isTextFiledsValid(TextField textFields, String text){
         String field = "";
-
         switch (textFields){
             case ID :
                 field = "^([A-Z][0-9]{3})$";
@@ -43,7 +42,7 @@ public class Regex  {
                 field = "^([A-z])([A-z0-9.]){1,}[@]([A-z0-9]){1,10}[.]([A-z]){2,5}$";
                 break;
             case AMOUNT:
-                field = "^([\\d]{3}|[\\d]{2}|[\\d]{1})$";
+                field = "^[0-9 .]{2,}$";
                 break;
             case POSITION:
                 field =  "^(([A-z|\\\\\\s]{3,})| ([\\\\\\s][A-z|\\\\\\s]{3,}))$";
@@ -55,10 +54,10 @@ public class Regex  {
                 field =  "^([A-z|\\s]{4,})$";
                 break;
             case UNITPRICE:
-                field =   "^([0-9]){1,}[.]([0-9]){1,}$";
+                field = "^[0-9 .]{2,}$";
                 break;
             case SALARY:
-                field = "^([0-9]){1,}[.]([0-9]){1,}$";
+                field = "^[0-9 .]{2,}$";
                 break;
 
         }
@@ -81,7 +80,7 @@ public class Regex  {
         return false;
     }
     public static boolean setTextColor(TextField location, JFXTextField field){
-        if (Regex.isTextFiledsValid(location,field.getText())){
+        if (Regex.isTextFiledsValid(location, field.getText())){
             field.setFocusColor(Paint.valueOf("Green"));
             field.setUnFocusColor(Paint.valueOf("Green"));
             return true;
