@@ -1,0 +1,33 @@
+
+a	java:S112©"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112à"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+g	java:S116ˆ"QRename this field "Status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ÿöé
+F	java:S106…"+Replace this use of System.out by a logger.(ù”çŞÿÿÿÿÿ
+o
+java:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Ÿ‡Ù7
+u
+java:S3012˜"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ø°şäşÿÿÿÿ
+K
+java:S1611¸"/Remove the parentheses around the "e" parameter(Â˜šùÿÿÿÿ
+
+java:S1130¤"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(€ûÒ
+I
+java:S1172®"2Remove this unused method parameter "actionEvent".(îÊ©Ç
+N
+java:S1172Á"2Remove this unused method parameter "actionEvent".(Û¿åşÿÿÿÿ
+N
+java:S1172×"2Remove this unused method parameter "actionEvent".(³°úûÿÿÿÿ
+N
+java:S1172æ"2Remove this unused method parameter "actionEvent".(ÌŸúôúÿÿÿÿ
+N
+java:S1172ù"2Remove this unused method parameter "actionEvent".(ÅâÅŒıÿÿÿÿ
+H
+java:S1172ƒ"2Remove this unused method parameter "actionEvent".(Éè¿	
+F
+java:S1172Œ"/Remove this unused method parameter "keyEvent".(È«å±
+K
+java:S1172"/Remove this unused method parameter "keyEvent".(ºÎ„Šüÿÿÿÿ
+F
+java:S1172”"/Remove this unused method parameter "keyEvent".(ø×¢
+]
+java:S1126š"AReplace this if-then-else statement by a single return statement.(±ã¬Ÿÿÿÿÿÿ

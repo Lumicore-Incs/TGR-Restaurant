@@ -97,7 +97,7 @@ public class EmployeeFormController {
                     employee.getName(),
                     employee.getAddress(),
                     employee.getContact(),
-                    employee.getPositon(),
+                    employee.getPosition(),
                     employee.getBasicSalary()
             );
 
@@ -172,7 +172,7 @@ public class EmployeeFormController {
                     txtName.setText(employee.getName());
                     txtAddress.setText(employee.getAddress());
                     txtContact.setText(employee.getContact());
-                    cmbPosition.setValue(employee.getPositon());
+                    cmbPosition.setValue(employee.getPosition());
                     txtSalary.setText(employee.getBasicSalary());
 
                 }else {

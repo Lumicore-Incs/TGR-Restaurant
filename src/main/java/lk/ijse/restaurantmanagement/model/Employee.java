@@ -11,7 +11,7 @@ public class Employee {
     private String name;
     private String address;
     private String contact;
-    private String positon;
+    private String position;
     private String basicSalary;
 
 
