@@ -12,13 +12,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F9EEC9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.PlaceOrderFormController">
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F9EEC9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.PlaceOrderFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
-      <Label layoutX="198.0" layoutY="16.0" prefHeight="53.0" prefWidth="309.0" text="Place Order Form" textFill="#bf3636f7">
+      <Label layoutX="25.0" layoutY="16.0" prefHeight="53.0" prefWidth="120.0" text="Order" textFill="#bf3636f7">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
@@ -45,12 +46,12 @@
       </JFXButton>
       <TableView fx:id="tblOrderCart" layoutX="412.0" layoutY="309.0" prefHeight="225.0" prefWidth="565.0" style="-fx-background-color: white;" stylesheets="@../Style/TableStyleSheet.css">
          <columns>
-            <TableColumn fx:id="colItemCode" prefWidth="67.0" text="Code" />
-            <TableColumn fx:id="colDescription" prefWidth="112.0" text="Description" />
+            <TableColumn fx:id="colItemCode" prefWidth="67.0" text="Id" />
+            <TableColumn fx:id="colDescription" prefWidth="112.0" text="Name" />
             <TableColumn fx:id="colQty" prefWidth="53.0" text="Qty" />
             <TableColumn fx:id="colUnitPrice" prefWidth="81.0" text="Unit Price" />
             <TableColumn fx:id="colTotal" prefWidth="95.0" text="Total" />
-            <TableColumn fx:id="coldate" minWidth="0.0" prefWidth="88.0" text="Date" />
+            <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="88.0" text="Date" />
             <TableColumn fx:id="colAction" minWidth="0.0" prefWidth="67.0" text="Action" />
          </columns>
       </TableView>
@@ -129,22 +130,17 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="27.0" layoutY="382.0" text="Code:" textFill="WHITE">
+      <Label layoutX="27.0" layoutY="382.0" text="Name :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="428.0" text="Description:" textFill="WHITE">
+      <Label layoutX="25.0" layoutY="428.0" text="Id : " textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label layoutX="22.0" layoutY="479.0" text="Unit Price:" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="21.0" layoutY="527.0" text="QtyOnHand:" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -179,12 +175,12 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtContact" layoutX="667.0" layoutY="129.0" onAction="#btnsearchOnAction" onKeyReleased="#txtAContactOnKeyReleased" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white;">
+      <JFXTextField fx:id="txtContact" layoutX="667.0" layoutY="129.0" onAction="#btnSearchOnAction" onKeyReleased="#txtAContactOnKeyReleased" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white;">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtId" layoutX="667.0" layoutY="175.0" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
+      <JFXTextField fx:id="txtCustomerId" layoutX="667.0" layoutY="175.0" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
          <font>
             <Font size="16.0" />
          </font>
@@ -194,22 +190,17 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtCode" layoutX="142.0" layoutY="371.0" onAction="#searchOnItemCode" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
+      <JFXTextField fx:id="txtName" layoutX="142.0" layoutY="371.0" onKeyReleased="#searchOnMenuOnAction" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtDescription" layoutX="141.0" layoutY="426.0" onAction="#searchOnDescAction" onKeyReleased="#txtDescOnKeyReleased" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white;">
+      <JFXTextField fx:id="txtId" layoutX="141.0" layoutY="426.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white;">
          <font>
             <Font size="16.0" />
          </font>
       </JFXTextField>
       <JFXTextField fx:id="txtUnitPrice" layoutX="141.0" layoutY="475.0" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </JFXTextField>
-      <JFXTextField fx:id="txtQtyOnHand" layoutX="142.0" layoutY="523.0" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
          <font>
             <Font size="16.0" />
          </font>
@@ -224,5 +215,14 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
+      <Pane fx:id="menuPane" layoutX="141.0" layoutY="412.0" prefHeight="200.0" prefWidth="309.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tblMenuItem" onMouseClicked="#tblClickOnAction" prefHeight="200.0" prefWidth="309.0">
+              <columns>
+                <TableColumn fx:id="colName" prefWidth="303.0" text="Name" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

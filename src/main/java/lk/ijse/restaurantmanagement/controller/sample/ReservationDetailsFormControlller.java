@@ -1,4 +1,4 @@
-package lk.ijse.restaurantmanagement.controller;
+package lk.ijse.restaurantmanagement.controller.sample;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

@@ -59,7 +59,7 @@ public class OrderRepo {
 
     }
 
-    public String autoGenarateOrderId() throws SQLException {
+    public String autoGenerateOrderId() throws SQLException {
         String sql = "SELECT orderId from Orders order by orderId desc limit 1";
         PreparedStatement pstm = DbConnection.getInstance().getConnection()
                 .prepareStatement(sql);

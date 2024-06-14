@@ -1,4 +1,4 @@
-package lk.ijse.restaurantmanagement.controller;
+package lk.ijse.restaurantmanagement.controller.sample;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
