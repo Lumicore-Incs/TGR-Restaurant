@@ -98,7 +98,7 @@
             <Image url="@../assets/icon/order.png" />
          </image>
       </ImageView>
-      <Button layoutX="39.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="MENU" textFill="WHITE">
+      <Button layoutX="39.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnMenuOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="MENU" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

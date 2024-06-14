@@ -4,60 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="100d1abc-bba4-44b3-b170-85d27a522464" name="Changes" comment="salary page complete">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/139210-food-plate-white-png-image-high-quality-thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/139210-food-plate-white-png-image-high-quality-thumb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/406947-13777-011424-14374250.webp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/406947-13777-011424-14374250.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/brasserie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/brasserie.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/cocktails-4k-full-hd-wallpaper-preview.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/cocktails-4k-full-hd-wallpaper-preview.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/dark-fast-food.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/dark-fast-food.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/download.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/download.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/fast-food-transparent-png-pictures-icons-and-png-18.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/fast-food-transparent-png-pictures-icons-and-png-18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/fernando-andrade-TrD7yA09Vg8-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/fernando-andrade-TrD7yA09Vg8-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/food-png-6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/food-png-6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/hamburger-and-fries.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/hamburger-and-fries.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/icons8-cart-48.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/icons8-cart-48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/icons8-food-100.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/icons8-food-100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/icons8-maximum-order-32.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/icons8-maximum-order-32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/icons8-purchase-order-48.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/icons8-purchase-order-48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/icons8-restaurant-64.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/icons8-restaurant-64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/images.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/images.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/ingredients-near-pizza.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/ingredients-near-pizza.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/login.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/login.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/loginpageimage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/loginpageimage.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/making-the-right-restaurant-table-choice-1000x510.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/making-the-right-restaurant-table-choice-1000x510.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/noodles.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/noodles.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/pasta.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/pasta.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/pexels-robinstickel-70497.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/pexels-robinstickel-70497.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/photo_2024-05-07_11-49-40 (2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/photo_2024-05-07_11-49-40 (2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/photo_2024-05-07_11-49-40.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/photo_2024-05-07_11-49-40.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/photo_2024-05-07_11-49-42.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/photo_2024-05-07_11-49-42.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/photo_2024-05-07_12-09-32.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/photo_2024-05-07_12-09-32.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/photo_2024-05-07_12-09-41.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/photo_2024-05-07_12-09-41.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/png-transparent-fast-food-hamburger-sushi-pizza-fast-food-food-breakfast-fast-food-restaurant.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/png-transparent-fast-food-hamburger-sushi-pizza-fast-food-food-breakfast-fast-food-restaurant.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/prawn-spicy-soup.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prawn-spicy-soup.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/prawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/prawn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets.icon/stories-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/stories-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/item_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/item_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/mailSender_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/mailSender_form.fxml" afterDir="false" />
+    <list default="true" id="100d1abc-bba4-44b3-b170-85d27a522464" name="Changes" comment="add content">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/1918abd785992c5e93164fba9813a303927de9f8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/1918abd785992c5e93164fba9813a303927de9f8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c127bb376821c2155179cc2f730b7bc4d5772a4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c127bb376821c2155179cc2f730b7bc4d5772a4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa1871c7f9a5cb8862bf5e72df849dc88966b580" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa1871c7f9a5cb8862bf5e72df849dc88966b580" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/ItemFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MainFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/util/Regex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/util/Regex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/query.sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/query.sql.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/main_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/main_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/payment_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/payment_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/placeOrder_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/placeOrder_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/reservation_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/reservation_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/resevationDetails_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/resevationDetails_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/salary_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/salary_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/tables_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/tables_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -79,39 +49,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LauncherWrapper.executor": "Run",
-    "Application.application.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "feat/modify-ui",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/lumicore inc/project/TGR-Restaurant/src/main/resources/assets/icon",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LauncherWrapper.executor&quot;: &quot;Run&quot;,
+    &quot;Application.application.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/modify-ui&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/lumicore inc/project/TGR-Restaurant/src/main/resources/view&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lk.ijse.restaurantmanagement" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\view" />
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\assets\icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\assets.icon" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lk.ijse.restaurantmanagement.repository" />
+      <recent name="lk.ijse.restaurantmanagement.model" />
+      <recent name="lk.ijse.restaurantmanagement.model.tm" />
     </key>
   </component>
   <component name="RunManager">
@@ -141,6 +117,8 @@
       <workItem from="1718037790249" duration="299000" />
       <workItem from="1718038158600" duration="407000" />
       <workItem from="1718099648924" duration="7399000" />
+      <workItem from="1718375579679" duration="1316000" />
+      <workItem from="1718389259264" duration="2221000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <option name="closed" value="true" />
@@ -158,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718038225507</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add content">
+      <option name="closed" value="true" />
+      <created>1718371942627</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718371942627</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +154,7 @@
     <MESSAGE value="add" />
     <MESSAGE value="login page complete" />
     <MESSAGE value="salary page complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="salary page complete" />
+    <MESSAGE value="add content" />
+    <option name="LAST_COMMIT_MESSAGE" value="add content" />
   </component>
 </project>

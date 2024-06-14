@@ -1,4 +1,5 @@
 package lk.ijse.restaurantmanagement.controller;
+
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +23,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 public class ItemFormController {
 
     @FXML
@@ -59,21 +61,20 @@ public class ItemFormController {
 
     @FXML
     private JFXTextField txtUnitPrice;
-    private List<Item> itemList=new ArrayList<>();
-    private Alert alert;
-    public void initialize() {
+    private List<Item> itemList = new ArrayList<>();
 
+
+    public void initialize() {
         try {
             autoGenarateId();
         } catch (ClassNotFoundException | SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
 
-        this.itemList=getAllItems();
+        this.itemList = getAllItems();
         getItemStatus();
         setCellValueFactory();
         loadItemTable();
-
     }
 
     private List<Item> getAllItems() {
@@ -81,22 +82,23 @@ public class ItemFormController {
         try {
             itemList = ItemRepo.getAll();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
         }
         return itemList;
     }
 
 
-    private String[] statusList={"Available","Unavailable"};
+    private String[] statusList = {"Available", "Unavailable"};
 
-    public void getItemStatus(){
+    public void getItemStatus() {
         List<String> statuslist = new ArrayList<>();
-        for(String data: statusList){
+        for (String data : statusList) {
             statuslist.add(data);
         }
-        ObservableList<String> obList= FXCollections.observableArrayList(statuslist);
+        ObservableList<String> obList = FXCollections.observableArrayList(statuslist);
         cmbStatus.setItems(obList);
     }
+
     private void loadItemTable() {
         ObservableList<ItemTm> tmList = FXCollections.observableArrayList();
 
@@ -113,9 +115,9 @@ public class ItemFormController {
             tmList.add(itemTm);
         }
         tblItem.setItems(tmList);
-        ItemTm selectedItem = tblItem.getSelectionModel().getSelectedItem();
-        System.out.println("selectedItem = " + selectedItem);
+       tblItem.getSelectionModel().getSelectedItem();
     }
+
     private void setCellValueFactory() {
         colProductId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colDescription.setCellValueFactory(new PropertyValueFactory<>("description"));
@@ -123,6 +125,7 @@ public class ItemFormController {
         colUnitPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
         colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
+
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
         if (isValidate()) {
@@ -140,30 +143,31 @@ public class ItemFormController {
             initialize();
         }
     }
+
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        if (isValidate()){
-        String id = txtId.getText();
-        String name = txtName.getText();
-        String qtyOnHand = txtQtyOnHand.getText();
-        String unitPrice = txtUnitPrice.getText();
-        String status=String.valueOf(cmbStatus.getValue());
+        if (isValidate()) {
+            String id = txtId.getText();
+            String name = txtName.getText();
+            String qtyOnHand = txtQtyOnHand.getText();
+            String unitPrice = txtUnitPrice.getText();
+            String status = String.valueOf(cmbStatus.getValue());
 
-        Item item = new Item(id, name, qtyOnHand,unitPrice,status);
+            Item item = new Item(id, name, qtyOnHand, unitPrice, status);
 
-        try {
+            try {
 
-            boolean isSaved = ItemRepo.save(item);
-            if(isSaved) {
-                new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
-                clearFields();
+                boolean isSaved = ItemRepo.save(item);
+                if (isSaved) {
+                    new Alert(Alert.AlertType.CONFIRMATION, "Item saved!").show();
+                    clearFields();
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
-        } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            clearFields();
+            initialize();
         }
-        clearFields();
-        initialize();
-    }
     }
 
     private void clearFields() {
@@ -173,11 +177,13 @@ public class ItemFormController {
         txtUnitPrice.setText("");
         cmbStatus.setValue("");
     }
+
     @FXML
     void btnClearOnAction(ActionEvent event) {
-        if (isValidate()){
-        clearFields();
-    }}
+        if (isValidate()) {
+            clearFields();
+        }
+    }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
@@ -202,7 +208,7 @@ public class ItemFormController {
         }
     }
 
-    public void btnBackOnAction(ActionEvent actionEvent)throws IOException {
+    public void btnBackOnAction(ActionEvent actionEvent) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/main_form.fxml"));
         Stage stage = (Stage) root.getScene().getWindow();
 
@@ -213,24 +219,24 @@ public class ItemFormController {
 
     public void searchOnAction(ActionEvent actionEvent) {
 
-            String description = txtName.getText();
+        String description = txtName.getText();
 
-            try {
-                Item item = ItemRepo.searchByDescription(description);
+        try {
+            Item item = ItemRepo.searchByDescription(description);
 
-                if (item != null) {
-                    txtId.setText(item.getId());
-                    txtName.setText(item.getDescription());
-                    txtQtyOnHand.setText(item.getQtyOnHand());
-                    txtUnitPrice.setText(item.getUnitPrice());
-                    cmbStatus.setValue(item.getStatus());
+            if (item != null) {
+                txtId.setText(item.getId());
+                txtName.setText(item.getDescription());
+                txtQtyOnHand.setText(item.getQtyOnHand());
+                txtUnitPrice.setText(item.getUnitPrice());
+                cmbStatus.setValue(item.getStatus());
 
-                }
-            } catch (SQLException e) {
-                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
-            initialize();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
+        initialize();
+    }
 
     public void tblClickOnAction(MouseEvent mouseEvent) {
         ItemTm selectedItem = tblItem.getSelectionModel().getSelectedItem();
@@ -240,26 +246,28 @@ public class ItemFormController {
         txtUnitPrice.setText(selectedItem.getUnitPrice());
         cmbStatus.setValue(selectedItem.getStatus());
     }
+
     @FXML
     private void autoGenarateId() throws SQLException, ClassNotFoundException {
         txtId.setText(new ItemRepo().autoGenarateItemCode());
     }
 
     public void txtItemUnitPriceOnKeyReleased(KeyEvent keyEvent) {
-        Regex.setTextColor(TextField.UNITPRICE,txtUnitPrice);
+        Regex.setTextColor(TextField.UNITPRICE, txtUnitPrice);
     }
 
     public void txtitemQtyOnKeyReleased(KeyEvent keyEvent) {
-        Regex.setTextColor(TextField.QTY,txtQtyOnHand);
+        Regex.setTextColor(TextField.QTY, txtQtyOnHand);
     }
 
     public void txtItemNameOnKeyReleased(KeyEvent keyEvent) {
-        Regex.setTextColor(TextField.NAME,txtName);
+        Regex.setTextColor(TextField.NAME, txtName);
     }
-    public boolean isValidate(){
-        if(!Regex.setTextColor(TextField.UNITPRICE,txtUnitPrice))return false;
-        if(!Regex.setTextColor(TextField.QTY,txtQtyOnHand))return false;
-        if(!Regex.setTextColor(TextField.NAME,txtName))return false;
+
+    public boolean isValidate() {
+        if (!Regex.setTextColor(TextField.UNITPRICE, txtUnitPrice)) return false;
+        if (!Regex.setTextColor(TextField.QTY, txtQtyOnHand)) return false;
+        if (!Regex.setTextColor(TextField.NAME, txtName)) return false;
         return true;
     }
 }

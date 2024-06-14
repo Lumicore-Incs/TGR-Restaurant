@@ -1,0 +1,24 @@
+
+`	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+F
+java:S1444H"+Make this "public static gmail" field final(€õªœÿÿÿÿÿ
+[
+java:S1117b"@Rename "customerList" which hides the field declared at line 74.(Þáƒ±øÿÿÿÿ
+@	java:S106y"+Replace this use of System.out by a logger.(Ðóˆ›
+Q	java:S125z"<This block of commented-out lines of code should be removed.(¾¬ÿÖ
+
+java:S1130Ø"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(€ûÒ
+M
+java:S1172ñ"1Remove this unused method parameter "mouseEvent".(¬·æåúÿÿÿÿ
+F
+java:S1172û"/Remove this unused method parameter "keyEvent".(ø‹ÄÊ
+F
+java:S1172ÿ"/Remove this unused method parameter "keyEvent".(‹–à½
+K
+java:S1172ƒ"/Remove this unused method parameter "keyEvent".(¾•³ ýÿÿÿÿ
+K
+java:S1172‡"/Remove this unused method parameter "keyEvent".(½ðþœøÿÿÿÿ
+X
+java:S1126Ž"AReplace this if-then-else statement by a single return statement.(õßÉ³
+N
+java:S1172”"2Remove this unused method parameter "actionEvent".(ÅâÅŒýÿÿÿÿ
