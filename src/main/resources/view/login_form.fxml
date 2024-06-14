@@ -18,7 +18,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#030303" height="708.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
       <ImageView fitHeight="613.0" fitWidth="611.0" layoutX="-8.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/dark-fast-food.jpg" />
+            <Image url="@../assets/dark-fast-food.jpg" />
          </image>
       </ImageView>
       <Label layoutX="94.0" layoutY="55.0" prefHeight="7.0" prefWidth="166.0" text="Seafood Restaurant" textFill="WHITE">
@@ -73,7 +73,7 @@
       </JFXPasswordField>
       <ImageView fitHeight="67.0" fitWidth="102.0" layoutX="20.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/logo.png" />
+            <Image url="@../assets/logo.png" />
          </image>
          <effect>
             <Blend mode="OVERLAY" />

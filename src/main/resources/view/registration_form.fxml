@@ -17,7 +17,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="702.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
       <ImageView fitHeight="733.0" fitWidth="515.0" layoutX="469.0" layoutY="-95.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/stories-unsplash.jpg" />
+            <Image url="@../assets/stories-unsplash.jpg" />
          </image>
       </ImageView>
       <Label layoutX="595.0" layoutY="36.0" prefHeight="45.0" prefWidth="282.0" text="The Monarch Reign" textFill="WHITE">
@@ -73,7 +73,7 @@
       </JFXTextField>
       <ImageView fitHeight="88.0" fitWidth="110.0" layoutX="870.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/logo.png" />
+            <Image url="@../assets/logo.png" />
          </image>
          <effect>
             <Blend mode="OVERLAY" />

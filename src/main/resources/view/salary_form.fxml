@@ -91,7 +91,7 @@
       </JFXTextField>
       <ImageView fitHeight="74.0" fitWidth="69.0" layoutX="917.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/logo.png" />
+            <Image url="@../assets/logo.png" />
          </image>
          <effect>
             <Blend mode="OVERLAY" />

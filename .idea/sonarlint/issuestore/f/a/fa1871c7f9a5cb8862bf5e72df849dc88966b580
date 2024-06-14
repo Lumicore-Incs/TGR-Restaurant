@@ -1,0 +1,23 @@
+
+†	java:S112T"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$366228fc-ed76-4e55-867a-d10408994ae8
+
+java:S1117P"<Rename "menuList" which hides the field declared at line 62.(õ–”ñ8ÚÏ¤·2J$7f7a9d14-e8f2-4b8d-85db-8eebdbe69d48
+•
+java:S3012_"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(äØ¡J$671c7d1a-be64-4876-91cc-daea34809d0d
+k	java:S106u"+Replace this use of System.out by a logger.(ù”çÞÿÿÿÿÿJ$3bd76b69-6813-4035-82e7-fbfd408f4249
+o
+java:S1172Í"2Remove this unused method parameter "actionEvent".(ÿ¼à«J$7f062253-d490-41f3-a634-46bc1f87e814
+t
+java:S1172Ö"2Remove this unused method parameter "actionEvent".(ÌŸúôúÿÿÿÿJ$e9a721de-fe7b-4122-9e3d-8c852b938a0d
+m
+java:S1172ë"1Remove this unused method parameter "mouseEvent".(‚Ó÷>J$921519f2-1e54-4eb3-a3af-804bbdbc0dd0
+q
+java:S1172ø"/Remove this unused method parameter "keyEvent".(¶ŠãüûÿÿÿÿJ$02661e5b-c0be-4fbd-bf9a-3f9d6786eee5
+q
+java:S1172ü"/Remove this unused method parameter "keyEvent".(®Ãò úÿÿÿÿJ$db7caba4-bdb7-4c79-a51b-45a5e8ed78ef
+q
+java:S1172€"/Remove this unused method parameter "keyEvent".(ñ¥©œþÿÿÿÿJ$c795e907-28a4-4262-b9e3-9b84ff374004
+ƒ
+java:S1126†"AReplace this if-then-else statement by a single return statement.(ÓÓ³äýÿÿÿÿJ$379dcdcc-6fb7-44cb-b7ee-f0d909c97c1b
+d
+java:S1068?")Remove this unused "alert" private field.(”ØÑJ$72b76a89-44f4-4725-baa7-8c9b0f954073

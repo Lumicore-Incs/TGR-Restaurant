@@ -120,7 +120,7 @@
          </font></JFXTextField>
       <ImageView fitHeight="72.0" fitWidth="65.0" layoutX="920.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" smooth="false">
          <image>
-            <Image url="@../assets.icon/logo.png" />
+            <Image url="@../assets/logo.png" />
          </image>
          <effect>
             <Blend mode="OVERLAY" />
