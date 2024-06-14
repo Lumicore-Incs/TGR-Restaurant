@@ -19,13 +19,13 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
       <ImageView fitHeight="800.0" fitWidth="1000.0" layoutY="-97.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/pasta.jpg" />
+            <Image url="@../assets/pasta.jpg" />
          </image>
       </ImageView>
       <Rectangle height="700.0" opacity="0.61" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0" />
       <ImageView fitHeight="70.0" fitWidth="64.0" layoutX="70.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/icons8-food-100.png" />
+            <Image url="@../assets/icons8-food-100.png" />
          </image>
       </ImageView>
       <Label layoutX="148.0" layoutY="36.0" prefHeight="50.0" prefWidth="259.0" text="Come &amp; Taste" textFill="WHITE">
@@ -153,7 +153,7 @@
       </Label>
       <ImageView fitHeight="73.0" fitWidth="95.0" layoutX="912.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/logo.png" />
+            <Image url="@../assets/logo.png" />
          </image>
       </ImageView>
    </children>

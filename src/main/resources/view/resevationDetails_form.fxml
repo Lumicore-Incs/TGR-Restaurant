@@ -31,7 +31,7 @@
       </Label>
       <ImageView fitHeight="69.0" fitWidth="59.0" layoutX="679.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/food-png-6.png" />
+            <Image url="@../assets/food-png-6.png" />
          </image>
          <effect>
             <ColorAdjust contrast="0.15" hue="1.0" />

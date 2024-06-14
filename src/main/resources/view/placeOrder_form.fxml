@@ -38,7 +38,7 @@
          <graphic>
             <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets.icon/icons8-cart-48.png" />
+                  <Image url="@../assets/icons8-cart-48.png" />
                </image>
             </ImageView>
          </graphic>
@@ -77,12 +77,12 @@
       </Label>
       <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="301.0" layoutY="637.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/icons8-purchase-order-48.png" />
+            <Image url="@../assets/icons8-purchase-order-48.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="69.0" fitWidth="59.0" layoutX="928.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/food-png-6.png" />
+            <Image url="@../assets/food-png-6.png" />
          </image>
          <effect>
             <ColorAdjust contrast="0.15" hue="1.0" />
@@ -161,7 +161,7 @@
       </Button>
       <ImageView fitHeight="22.0" fitWidth="21.0" layoutX="787.0" layoutY="636.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/icons8-maximum-order-32.png" />
+            <Image url="@../assets/icons8-maximum-order-32.png" />
          </image>
       </ImageView>
       <Button layoutX="590.0" layoutY="629.0" mnemonicParsing="false" onAction="#btnGetReceipt" prefHeight="35.0" prefWidth="140.0" style="-fx-background-radius: 30; -fx-background-color: #87633a;" text="Get Receipt">

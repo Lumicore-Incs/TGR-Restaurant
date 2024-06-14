@@ -1,0 +1,21 @@
+
+}
+java:S1117Q"<Rename "itemList" which hides the field declared at line 64.(ø€¡“üÿÿÿÿJ$fb9790fc-6506-4e9a-9652-957ee4f2698a
+•
+java:S3012`"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(äØ¡J$4564b0c1-71d0-4803-a908-7baf431dbb9e
+o
+java:S1172Ó"2Remove this unused method parameter "actionEvent".(ÿ¼à«J$8f3339d3-babf-47da-80ac-83176b9f66ea
+t
+java:S1172Ü"2Remove this unused method parameter "actionEvent".(ÌŸúôúÿÿÿÿJ$fcb22769-349f-4abf-85fc-06894dac9a16
+m
+java:S1172ñ"1Remove this unused method parameter "mouseEvent".(‚Ó÷>J$771479c6-8cc8-4649-8403-b4c29bea534d
+¶
+java:S1130û"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(€ûÒJ$4d2bda62-d078-4715-9ef4-71bee4babfe2
+q
+java:S1172ÿ"/Remove this unused method parameter "keyEvent".(¶ŠãüûÿÿÿÿJ$80d0222e-d35a-47ee-bf0f-74bd610d9806
+q
+java:S1172ƒ"/Remove this unused method parameter "keyEvent".(®Ãò úÿÿÿÿJ$f8cffc9a-fde2-49dd-a04f-b516fad14f5a
+q
+java:S1172‡"/Remove this unused method parameter "keyEvent".(ñ¥©œşÿÿÿÿJ$4dd21f3f-53b2-461e-ba2b-4be7dc4f40d5
+ƒ
+java:S1126"AReplace this if-then-else statement by a single return statement.(ÓÓ³äıÿÿÿÿJ$b2426989-e336-48d0-a0ec-056d09984afe

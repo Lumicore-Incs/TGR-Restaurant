@@ -41,7 +41,7 @@
       </Label>
       <ImageView fitHeight="43.0" fitWidth="67.0" layoutX="390.0" layoutY="429.0" onMouseClicked="#btnSendOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/icons8-send-48.png" />
+            <Image url="@../assets/icons8-send-48.png" />
          </image>
       </ImageView>
    </children>

@@ -67,7 +67,7 @@
       </JFXButton>
       <ImageView fitHeight="69.0" fitWidth="59.0" layoutX="923.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assets.icon/food-png-6.png" />
+            <Image url="@../assets/food-png-6.png" />
          </image>
          <effect>
             <ColorAdjust contrast="0.15" hue="1.0" />
@@ -110,7 +110,7 @@
          <graphic>
             <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assets.icon/icons8-cart-48.png" />
+                  <Image url="@../assets/icons8-cart-48.png" />
                </image>
             </ImageView>
          </graphic>

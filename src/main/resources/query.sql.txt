@@ -68,6 +68,14 @@ status varchar (30)
 );
 
 
+create table Menu(
+id varchar (10) primary key,
+name varchar (40),
+size varchar (10),
+unitPrice varchar (15),
+status varchar (30)
+);
+
 create table Inventory(
 inventoryId varchar (10) primary key,
 description varchar (40),
