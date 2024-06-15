@@ -69,7 +69,7 @@ public class DashboardFormController {
         setItemCount(itemCount);
         setEmployeeCount(employeeCount);
 
-         OrderRepo.OrdersCount(barChartOrders);
+         OrderRepo.ordersCount(barChartOrders);
     }
 
 

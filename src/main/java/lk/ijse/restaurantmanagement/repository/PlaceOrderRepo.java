@@ -1,5 +1,6 @@
 package lk.ijse.restaurantmanagement.repository;
 
+import javafx.scene.control.Alert;
 import lk.ijse.restaurantmanagement.db.DbConnection;
 import lk.ijse.restaurantmanagement.model.PlaceOrder;
 
@@ -13,20 +14,17 @@ public class PlaceOrderRepo {
 
         try {
             boolean isOrderSaved = OrderRepo.save(po.getOrder());
-                       if (isOrderSaved) {
+            if (isOrderSaved) {
                 boolean isOrderDetailSaved = OrderDetailRepo.save(po.getOdList());
                 if (isOrderDetailSaved) {
-                    boolean isItemQtyUpdate = ItemRepo.updateQty(po.getOdList());
-                    if (isItemQtyUpdate) {
                         connection.commit();
                         return true;
-                    }
                 }
             }
             connection.rollback();
             return false;
         } catch (Exception e) {
-            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             connection.rollback();
             return false;
         } finally {

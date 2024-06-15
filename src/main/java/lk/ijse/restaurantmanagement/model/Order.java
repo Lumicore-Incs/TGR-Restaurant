@@ -11,4 +11,5 @@ public class Order {
     private String orderType;
     private String cusId;
     private String date;
+    private double total;
 }

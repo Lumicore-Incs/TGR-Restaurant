@@ -44,7 +44,25 @@ orderId varchar(10) primary key,
 orderType varchar (25),
 cusId varchar (10),
 date varchar (15),
-foreign key(cusId) references Customer(cusId) on update cascade on delete cascade
+total double,
+);
+
+create table Menu(
+id varchar (10) primary key,
+name varchar (40),
+size varchar (10),
+unitPrice varchar (15),
+status varchar (30)
+);
+
+
+create table Order_Details(
+orderId varchar (10),
+menuId varchar (10),
+qty int (10),
+unitPrice decimal(12),
+foreign key(orderId) references Orders(orderId) on update cascade on delete cascade,
+foreign key(menuId) references Menu(id) on update cascade on delete cascade
 );
 
 
@@ -68,14 +86,6 @@ status varchar (30)
 );
 
 
-create table Menu(
-id varchar (10) primary key,
-name varchar (40),
-size varchar (10),
-unitPrice varchar (15),
-status varchar (30)
-);
-
 create table Inventory(
 inventoryId varchar (10) primary key,
 description varchar (40),
@@ -93,15 +103,6 @@ foreign key(inventoryId) references Inventory(inventoryId) on update cascade on 
 foreign key(itemId) references Item(Id) on update cascade on delete cascade
 );
 
-
-create table Order_Details(
-orderId varchar (10),
-itemId varchar (10),
-qty int (10),
-unitPrice decimal(12),
-foreign key(orderId) references Orders(orderId) on update cascade on delete cascade,
-foreign key(itemId) references Item(Id) on update cascade on delete cascade
-);
 
 
 create table Employee(
