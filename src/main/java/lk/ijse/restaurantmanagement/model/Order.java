@@ -12,4 +12,6 @@ public class Order {
     private String cusId;
     private String date;
     private double total;
+    private int tableNo;
+    private double serviceCharge;
 }

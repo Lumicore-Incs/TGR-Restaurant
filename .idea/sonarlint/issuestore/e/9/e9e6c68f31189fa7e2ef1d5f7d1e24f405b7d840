@@ -1,0 +1,15 @@
+
+†	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$f38d9c57-f39f-4817-9e3f-769bf5fc8be5
+
+java:S1450%"\Remove the "customerCount" field and declare it as a local variable in the relevant methods.(å¯ßºşÿÿÿÿJ$12f413bb-635b-4b00-81df-ee8c7f751484
+˜
+java:S1450'"\Remove the "employeeCount" field and declare it as a local variable in the relevant methods.(àë­•J$38f7b2f6-35f8-4da0-9f89-16f62390b72b
+™
+java:S1450&"XRemove the "itemCount" field and declare it as a local variable in the relevant methods.(­¯Ê…ûÿÿÿÿJ$a474911c-bce2-45e9-9508-fd324d1f0f36
+š
+java:S2142R"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾J$854911c4-9976-4133-9871-e286bc91350a
+k	java:S106S"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿJ$69b64ed6-3dd0-4747-89e0-bfc87e163adc
+h
+java:S1602V",Remove useless curly braces around statement(ÃÉş©J$f2842aba-5e5a-4ab1-a157-b9ffd67c0059
+n
+java:S1172k"2Remove this unused method parameter "actionEvent".(ÿ¼à«J$3ae73c3f-7f82-4a53-817e-45341145f264

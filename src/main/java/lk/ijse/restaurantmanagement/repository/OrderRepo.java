@@ -23,13 +23,15 @@ public class OrderRepo {
     }
 
     public static boolean save(Order order) throws SQLException {
-        String sql = "INSERT INTO orders VALUES(?, ?, ?,?,?)";
+        String sql = "INSERT INTO orders VALUES(?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
         pstm.setString(1, order.getOrderId());
         pstm.setString(2, order.getOrderType());
         pstm.setString(3, order.getCusId());
         pstm.setString(4, order.getDate());
         pstm.setString(5, String.valueOf(order.getTotal()));
+        pstm.setString(6, String.valueOf(order.getTableNo()));
+        pstm.setString(7, String.valueOf(order.getServiceCharge()));
         return pstm.executeUpdate() > 0;
     }
 
@@ -47,8 +49,10 @@ public class OrderRepo {
             String cusId = resultSet.getString(3);
             String date = resultSet.getString(4);
             double total = Double.parseDouble(resultSet.getString(5));
+            int tableNo = Integer.parseInt(resultSet.getString(6));
+            double serviceCharge = Double.parseDouble(resultSet.getString(7));
 
-            orders = new Order(orderid, orderType, cusId, date, total);
+            orders = new Order(orderid, orderType, cusId, date, total, tableNo, serviceCharge);
         }
         return orders;
 

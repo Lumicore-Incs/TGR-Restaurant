@@ -24,7 +24,7 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="432.0" layoutY="567.0" text="Qty:" textFill="WHITE">
+      <Label layoutX="22.0" layoutY="537.0" text="Qty:" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -182,6 +182,11 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
+      <JFXTextField fx:id="txtTableNo" layoutX="142.0" layoutY="279.0" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
       <JFXTextField fx:id="txtName" layoutX="142.0" layoutY="371.0" onKeyReleased="#searchOnMenuOnAction" prefHeight="30.0" prefWidth="250.0" style="-fx-text-fill: white;">
          <font>
             <Font size="16.0" />
@@ -197,7 +202,7 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtQty" layoutX="482.0" layoutY="564.0" onAction="#txtQtyOnAction" prefHeight="33.0" prefWidth="76.0" style="-fx-text-fill: white;">
+      <JFXTextField fx:id="txtQty" layoutX="141.0" layoutY="532.0" onAction="#txtQtyOnAction" prefHeight="33.0" prefWidth="76.0" style="-fx-text-fill: white;">
          <font>
             <Font size="16.0" />
          </font>
@@ -207,9 +212,9 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <Pane fx:id="menuPane" layoutX="141.0" layoutY="412.0" prefHeight="200.0" prefWidth="309.0" style="-fx-background-color: white;">
+      <Pane fx:id="menuPane" layoutX="139.0" layoutY="406.0" prefHeight="200.0" prefWidth="309.0" style="-fx-background-color: white;">
          <children>
-            <TableView fx:id="tblMenuItem" onMouseClicked="#tblClickOnAction" prefHeight="200.0" prefWidth="309.0">
+            <TableView fx:id="tblMenuItem" layoutY="1.0" onMouseClicked="#tblClickOnAction" prefHeight="200.0" prefWidth="309.0">
               <columns>
                 <TableColumn fx:id="colName" prefWidth="303.0" text="Name" />
               </columns>
@@ -229,5 +234,20 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <Label layoutX="472.0" layoutY="569.0" text="Service Charge : " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="287.0" text="Table No : " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtServiceCharge" layoutX="612.0" layoutY="563.0" prefHeight="37.0" prefWidth="85.0" style="-fx-text-fill: white;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>

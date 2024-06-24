@@ -37,6 +37,8 @@ public class PlaceOrderFormController {
     public TableColumn<?, ?> colName;
     public JFXTextField txtName;
     public JFXTextField txtCustomerId;
+    public JFXTextField txtServiceCharge;
+    public JFXTextField txtTableNo;
     @FXML
     private AnchorPane root;
 
@@ -164,7 +166,6 @@ public class PlaceOrderFormController {
                 JFXButton btnRemove = new JFXButton("remove");
                 btnRemove.setStyle("-fx-background-radius:10px; -fx-background-color: grey");
                 btnRemove.setCursor(Cursor.HAND);
-                System.out.println("ok "+txtQty.getText());
                 int qty= Integer.parseInt(qty2);
                 double total = qty * unitPrice;
                 btnRemove.setOnAction(e -> {
@@ -237,8 +238,10 @@ public class PlaceOrderFormController {
             String orderType = String.valueOf(cmbOrderType.getValue());
             String cusId = txtCustomerId.getText();
             String date = String.valueOf(Date.valueOf(LocalDate.now()));
+            int tableNo = Integer.parseInt(txtTableNo.getText());
+            double serviceCharge = Double.parseDouble(txtServiceCharge.getText());
 
-            var order = new Order(orderId, orderType, cusId, date, netTotal);
+            var order = new Order(orderId, orderType, cusId, date, netTotal+serviceCharge, tableNo, serviceCharge);
 
             List<OrderDetail> odList = new ArrayList<>();
             for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
@@ -323,23 +326,15 @@ public class PlaceOrderFormController {
 
     public void btnReceiptOnAction() throws JRException, SQLException {
         if (isValidate()) {
-            JasperDesign jasperDesign =
-                    JRXmlLoader.load("/reports/order_details.jrxml");
-            JasperReport jasperReport =
-                    JasperCompileManager.compileReport(jasperDesign);
-
-
-            Map<String, Object> data = new HashMap<>();
-            data.put("orderId", txtOrderId.getText());
-            data.put("unitPrice", txtUnitPrice.getText());
-
-            JasperPrint jasperPrint =
-                    JasperFillManager.fillReport(
-                            jasperReport,
-                            data,
-                            DbConnection.getInstance().getConnection());
-
-            JasperViewer.viewReport(jasperPrint, false);
+            System.out.println("1");
+            try {
+                JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/reports/Blank_A4_1.jrxml"));
+                JasperReport jasperReport = JasperCompileManager.compileReport(load);
+                JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, DbConnection.getInstance().getConnection());
+                JasperViewer.viewReport(jasperPrint, false);
+            } catch (JRException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
