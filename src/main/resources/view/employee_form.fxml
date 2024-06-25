@@ -14,111 +14,106 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.EmployeeFormController">
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.EmployeeFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
       <Text fill="#bf3636" layoutX="34.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Text>
-      <Label layoutX="528.0" layoutY="79.0" text="Address*" textFill="WHITE">
+      <Label layoutX="397.0" layoutY="87.0" text="Address*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="79.0" text="Employee ID*" textFill="WHITE">
+      <Label layoutX="45.0" layoutY="86.0" text="Employee ID*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="169.0" text="Name*" textFill="WHITE">
+      <Label layoutX="45.0" layoutY="168.0" text="Name*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="528.0" layoutY="169.0" text="Contact Number*" textFill="WHITE">
+      <Label layoutX="397.0" layoutY="172.0" text="Contact Number*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="643.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: grey;" text="Back" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="520.0" layoutY="643.0" onAction="#btnDeleteOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #31363F; -fx-background-radius: 15;" text="Delete" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="635.0" layoutY="643.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #446f85; -fx-background-radius: 15;" text="Clear" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="753.0" layoutY="643.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #a36264; -fx-background-radius: 15;" text="Update" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="869.0" layoutY="643.0" onAction="#btnSaveOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #8f5b71; -fx-background-radius: 15;" text="Save" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <Label layoutX="666.0" layoutY="25.0" prefHeight="40.0" prefWidth="280.0" text="The Monarch Reign" textFill="#c64a6f">
+      <Label layoutX="366.0" layoutY="24.0" prefHeight="40.0" prefWidth="280.0" text="The Monarch Reign" textFill="#c64a6f">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="780.0" layoutY="57.0" prefHeight="22.0" prefWidth="140.0" text="Seafood Restaurant" textFill="#c64a6f">
+      <Label layoutX="480.0" layoutY="56.0" prefHeight="22.0" prefWidth="140.0" text="Seafood Restaurant" textFill="#c64a6f">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="45.0" layoutY="257.0" prefHeight="30.0" prefWidth="93.0" text="Position*" textFill="WHITE">
+      <Label layoutX="45.0" layoutY="256.0" prefHeight="30.0" prefWidth="93.0" text="Position*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="526.0" layoutY="257.0" text="Basic Salary*" textFill="WHITE">
+      <Label layoutX="395.0" layoutY="254.0" text="Basic Salary*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <TableView fx:id="tblEmployee" layoutX="49.0" layoutY="362.0" onMouseClicked="#tblClickOnAction" prefHeight="256.0" prefWidth="916.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 7px 7px 0px 0px; -fx-background-insets: 0 11px 0 0; -fx-padding: 0 0 5px 0;" stylesheets="@../Style/TableStyleSheet.css">
+      <TableView fx:id="tblEmployee" layoutX="49.0" layoutY="362.0" onMouseClicked="#tblClickOnAction" prefHeight="256.0" prefWidth="625.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 7px 7px 0px 0px; -fx-background-insets: 0 11px 0 0; -fx-padding: 0 0 5px 0;" stylesheets="@../Style/TableStyleSheet.css">
          <columns>
-            <TableColumn fx:id="colId" prefWidth="151.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="181.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Name" />
-            <TableColumn fx:id="colAddress" prefWidth="171.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Address" />
-            <TableColumn fx:id="colContact" prefWidth="139.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Contact" />
-            <TableColumn fx:id="colPosition" prefWidth="147.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Position" />
-            <TableColumn fx:id="colBasicSalary" prefWidth="126.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="BasicSalary" />
+            <TableColumn fx:id="colId" prefWidth="68.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="111.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="110.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="99.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Contact" />
+            <TableColumn fx:id="colPosition" prefWidth="108.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="Position" />
+            <TableColumn fx:id="colBasicSalary" prefWidth="117.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-radius: 0px 0px 0px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-insets: 2px  0 3px 0px;" text="BasicSalary" />
          </columns>
       </TableView>
-      <JFXTextField fx:id="txtId" layoutX="44.0" layoutY="113.0" prefHeight="30.0" prefWidth="435.0" style="-fx-background-color: white; -fx-padding: 5px;">
+      <JFXTextField fx:id="txtId" layoutX="44.0" layoutY="120.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white; -fx-padding: 5px;">
          <font>
             <Font size="18.0" />
          </font></JFXTextField>
-      <JFXTextField fx:id="txtAddress" layoutX="526.0" layoutY="113.0" onKeyReleased="#txtEmployeeAddressOnKeyReleased" prefHeight="39.0" prefWidth="435.0" style="-fx-background-color: white; -fx-padding: 5px;">
+      <JFXTextField fx:id="txtAddress" layoutX="395.0" layoutY="121.0" onKeyReleased="#txtEmployeeAddressOnKeyReleased" prefHeight="39.0" prefWidth="250.0" style="-fx-background-color: white; -fx-padding: 5px;">
          <font>
             <Font size="18.0" />
          </font></JFXTextField>
-      <JFXTextField fx:id="txtName" layoutX="44.0" layoutY="200.0" onKeyReleased="#txtEmployeeNameOnKeyReleased" prefHeight="30.0" prefWidth="435.0" style="-fx-background-color: white; -fx-padding: 5px;">
+      <JFXTextField fx:id="txtName" layoutX="44.0" layoutY="199.0" onKeyReleased="#txtEmployeeNameOnKeyReleased" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white; -fx-padding: 5px;">
          <font>
             <Font size="18.0" />
          </font></JFXTextField>
-      <JFXTextField fx:id="txtContact" layoutX="526.0" layoutY="200.0" onAction="#txtSearchOnAction" onKeyReleased="#txtEmployeeContactOnKeyReleased" prefHeight="30.0" prefWidth="435.0" style="-fx-background-color: white; -fx-padding: 5px;">
+      <JFXTextField fx:id="txtContact" layoutX="395.0" layoutY="203.0" onAction="#txtSearchOnAction" onKeyReleased="#txtEmployeeContactOnKeyReleased" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white; -fx-padding: 5px;">
          <font>
             <Font size="18.0" />
          </font></JFXTextField>
-      <ComboBox fx:id="cmbPosition" layoutX="44.0" layoutY="287.0" prefHeight="31.0" prefWidth="196.0" promptText="Position" />
-      <JFXTextField fx:id="txtSalary" layoutX="526.0" layoutY="287.0" prefHeight="30.0" prefWidth="435.0" style="-fx-background-color: white; -fx-padding: 5px;">
+      <ComboBox fx:id="cmbPosition" layoutX="44.0" layoutY="286.0" prefHeight="31.0" prefWidth="196.0" promptText="Position" />
+      <JFXTextField fx:id="txtSalary" layoutX="395.0" layoutY="284.0" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: white; -fx-padding: 5px;">
          <font>
             <Font size="18.0" />
          </font></JFXTextField>
-      <ImageView fitHeight="72.0" fitWidth="65.0" layoutX="920.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+      <JFXButton buttonType="RAISED" layoutX="590.0" layoutY="640.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #8f5b71; -fx-background-radius: 15;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="640.0" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #446f85; -fx-background-radius: 15;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="400.0" layoutY="640.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #31363F; -fx-background-radius: 15;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="495.0" layoutY="640.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #a36264; -fx-background-radius: 15;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="72.0" fitWidth="65.0" layoutX="620.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" smooth="false">
          <image>
             <Image url="@../assets/logo.png" />
          </image>

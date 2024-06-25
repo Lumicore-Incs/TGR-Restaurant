@@ -216,6 +216,7 @@ public class EmployeeFormController {
         txtContact.setText("");
         cmbPosition.setValue("");
         txtSalary.setText("");
+        initialize();
     }
 
     public void btnClearOnAction() {

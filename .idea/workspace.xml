@@ -1,22 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Restaurant-Management:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="100d1abc-bba4-44b3-b170-85d27a522464" name="Changes" comment="place order complete">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="100d1abc-bba4-44b3-b170-85d27a522464" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/112d343930dbe0dc1e07b6361c04ff819e1bd106" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/112d343930dbe0dc1e07b6361c04ff819e1bd106" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c127bb376821c2155179cc2f730b7bc4d5772a4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c127bb376821c2155179cc2f730b7bc4d5772a4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/889d5e5082796d9fc84f77a7b8976e7ff5cd2c7f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/889d5e5082796d9fc84f77a7b8976e7ff5cd2c7f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d63ccae8e3f1eff6633724ee250c65365efa75fc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/6/d63ccae8e3f1eff6633724ee250c65365efa75fc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9e6c68f31189fa7e2ef1d5f7d1e24f405b7d840" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9e6c68f31189fa7e2ef1d5f7d1e24f405b7d840" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa1871c7f9a5cb8862bf5e72df849dc88966b580" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa1871c7f9a5cb8862bf5e72df849dc88966b580" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Restaurant_Management_jar/Restaurant-Management.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Restaurant_Management_jar/Restaurant-Management.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/DashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MenuFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MenuFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/PlaceOrderFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/OrderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/OrderRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/order_details.jrxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/MenuRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/MenuRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/query.sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/query.sql.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/OrderForm.jrxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/main_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/main_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/menu_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/menu_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/placeOrder_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/placeOrder_form.fxml" afterDir="false" />
     </list>
@@ -57,7 +69,7 @@
   "keyToString": {
     "Application.LauncherWrapper.executor": "Run",
     "Application.application.executor": "Run",
-    "JAR Application.TMR system.executor": "Debug",
+    "JAR Application.TMR system.executor": "Run",
     "Maven.Restaurant-Management [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -65,16 +77,16 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "feat/order-crud-implementation",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/lumicore inc/project/TGR-Restaurant/target/Restaurant-Management-1.0-SNAPSHOT.jar",
+    "last_opened_file_path": "D:/lumicore inc/project/TGR-Restaurant/src/main/resources/reports",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.41494253",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -95,6 +107,7 @@
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\assets\icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\reports\test" />
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\reports" />
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\assets.icon" />
     </key>
@@ -104,7 +117,7 @@
       <recent name="lk.ijse.restaurantmanagement.model.tm" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.TMR system">
+  <component name="RunManager" selected="Application.application">
     <configuration name="application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="lk.ijse.restaurantmanagement.LauncherWrapper" />
       <module name="Restaurant-Management" />
@@ -150,6 +163,9 @@
       <workItem from="1719205312679" duration="248000" />
       <workItem from="1719242121785" duration="6258000" />
       <workItem from="1719253864354" duration="1526000" />
+      <workItem from="1719261891007" duration="1807000" />
+      <workItem from="1719329472691" duration="7050000" />
+      <workItem from="1719338298215" duration="9736000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <option name="closed" value="true" />
@@ -186,6 +202,7 @@
     <MESSAGE value="login page complete" />
     <MESSAGE value="salary page complete" />
     <MESSAGE value="add content" />
-    <option name="LAST_COMMIT_MESSAGE" value="add content" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

@@ -35,7 +35,7 @@ public class MenuRepo {
     }
 
     public static List<Menu> searchByMenuName(String menuName) throws SQLException {
-        String sql = "SELECT * FROM menu WHERE name LIKE '"+menuName+"%'";
+        String sql = "SELECT * FROM menu WHERE name LIKE '" + menuName + "%'";
         PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
         ResultSet resultSet = pstm.executeQuery();
 
@@ -51,6 +51,24 @@ public class MenuRepo {
             itemList.add(menu);
         }
         return itemList;
+    }
+
+    public static Menu isExit(String name, String qtyOnHand) throws SQLException {
+        String sql = "SELECT * from menu where name=? && size=?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setObject(1, name);
+        pstm.setObject(2, qtyOnHand);
+        ResultSet resultSet = pstm.executeQuery();
+        if (resultSet.next()) {
+            return new Menu(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5)
+            );
+        }
+        return null;
     }
 
     public String autoGenerateItemCode() throws SQLException {

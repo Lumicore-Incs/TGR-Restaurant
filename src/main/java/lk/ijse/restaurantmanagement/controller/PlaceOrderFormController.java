@@ -10,6 +10,7 @@ import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -160,13 +161,12 @@ public class PlaceOrderFormController {
             if (txtQty.getText()!=null && cmbOrderType.getValue()!=null && txtId.getText()!=null){
                 String id = txtId.getText();
                 String description = txtName.getText();
-                String qty2 = txtQty.getText();
                 double unitPrice = Double.parseDouble(txtUnitPrice.getText());
                 String date = txtDate.getText();
                 JFXButton btnRemove = new JFXButton("remove");
                 btnRemove.setStyle("-fx-background-radius:10px; -fx-background-color: grey");
                 btnRemove.setCursor(Cursor.HAND);
-                int qty= Integer.parseInt(qty2);
+                int qty= Integer.parseInt(txtQty.getText());
                 double total = qty * unitPrice;
                 btnRemove.setOnAction(e -> {
                     ButtonType yes = new ButtonType("yes", ButtonBar.ButtonData.OK_DONE);
@@ -187,7 +187,6 @@ public class PlaceOrderFormController {
                     if (id.equals(colItemCode.getCellData(i))) {
                         qty += cartList.get(i).getQty();
                         total = unitPrice * qty;
-
                         cartList.get(i).setQty(qty);
                         cartList.get(i).setTotal(total);
 
@@ -199,7 +198,7 @@ public class PlaceOrderFormController {
                     clear();
                     clearFields();
                 }
-
+                System.out.println("to "+total);
                 CartTm cartTm = new CartTm(id, description, qty, unitPrice, total, date, btnRemove);
 
                 cartList.add(cartTm);
@@ -215,10 +214,11 @@ public class PlaceOrderFormController {
     }
 
     private void calculateNetTotal() {
+        double fullTotal=0;
         for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
-            netTotal += (double) colTotal.getCellData(i);
+            fullTotal += (double) colTotal.getCellData(i);
         }
-        txtNetTotal.setText(String.valueOf(netTotal));
+        txtNetTotal.setText(String.valueOf(fullTotal));
     }
 
     @FXML
@@ -239,35 +239,40 @@ public class PlaceOrderFormController {
             String cusId = txtCustomerId.getText();
             String date = String.valueOf(Date.valueOf(LocalDate.now()));
             int tableNo = Integer.parseInt(txtTableNo.getText());
-            double serviceCharge = Double.parseDouble(txtServiceCharge.getText());
+            String service = txtServiceCharge.getText();
 
-            var order = new Order(orderId, orderType, cusId, date, netTotal+serviceCharge, tableNo, serviceCharge);
+            if (service!=null){
+                double serviceCharge= Double.parseDouble(service);
+                var order = new Order(orderId, orderType, cusId, date, netTotal+serviceCharge, tableNo, serviceCharge);
 
-            List<OrderDetail> odList = new ArrayList<>();
-            for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
-                CartTm tm = cartList.get(i);
+                List<OrderDetail> odList = new ArrayList<>();
+                for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
+                    CartTm tm = cartList.get(i);
 
-                OrderDetail od = new OrderDetail(
-                        orderId,
-                        tm.getId(),
-                        tm.getQty(),
-                        tm.getUnitPrice()
-                );
-                odList.add(od);
-            }
-
-            PlaceOrder po = new PlaceOrder(order, odList);
-            try {
-                boolean isPlaced = PlaceOrderRepo.placeOrder(po);
-                if (isPlaced) {
-                    new Alert(Alert.AlertType.CONFIRMATION, "order placed!").show();
-                    autoGenerateId();
-                    clearFields();
-                } else {
-                    new Alert(Alert.AlertType.WARNING, "order not placed!").show();
+                    OrderDetail od = new OrderDetail(
+                            orderId,
+                            tm.getId(),
+                            tm.getQty(),
+                            tm.getUnitPrice()
+                    );
+                    odList.add(od);
                 }
-            } catch (SQLException e) {
-                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+
+                PlaceOrder po = new PlaceOrder(order, odList);
+                try {
+                    boolean isPlaced = PlaceOrderRepo.placeOrder(po);
+                    if (isPlaced) {
+                        new Alert(Alert.AlertType.CONFIRMATION, "order placed!").show();
+                        autoGenerateId();
+                        clearFields();
+                    } else {
+                        new Alert(Alert.AlertType.WARNING, "order not placed!").show();
+                    }
+                } catch (SQLException e) {
+                    new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+                }
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Enter Service Charge..!").show();
             }
         }
     }
@@ -316,6 +321,8 @@ public class PlaceOrderFormController {
         txtId.setText("");
         txtCustomerName.setText("");
         txtNetTotal.setText("");
+        txtServiceCharge.setText("");
+        txtTableNo.setText("");
     }
 
     private void clear() {
@@ -325,41 +332,30 @@ public class PlaceOrderFormController {
     }
 
     public void btnReceiptOnAction() throws JRException, SQLException {
-        if (isValidate()) {
-            System.out.println("1");
+        System.out.println("1");
+        String orderId = txtOrderId.getText();
+        Order order = OrderRepo.searchById(orderId);
+        if (order!=null) {
             try {
-                JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/reports/Blank_A4_1.jrxml"));
+                HashMap data = new HashMap<>();
+                data.put("orderId", orderId);
+                data.put("id", orderId);
+                data.put("tableNo", order.getTableNo());
+                data.put("date", order.getDate() );
+                data.put("time", LocalDate.now());
+                data.put("total", order.getTotal()-order.getServiceCharge());
+                data.put("serviceCharge", order.getServiceCharge());
+                data.put("netTotal", order.getTotal());
+
+                JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/reports/OrderForm.jrxml"));
                 JasperReport jasperReport = JasperCompileManager.compileReport(load);
-                JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, DbConnection.getInstance().getConnection());
+                JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, data, new JREmptyDataSource());
                 JasperViewer.viewReport(jasperPrint, false);
             } catch (JRException e) {
                 throw new RuntimeException(e);
             }
         }
     }
-
-    public void btnGetReceipt() throws JRException, SQLException {
-        if (isValidate()) {
-            JasperDesign jasperDesign =
-                    JRXmlLoader.load("/reports/CustomerReceipt.jrxml");
-            JasperReport jasperReport =
-                    JasperCompileManager.compileReport(jasperDesign);
-
-
-            Map<String, Object> data = new HashMap<>();
-            data.put("orderId", txtOrderId.getText());
-            data.put("qty", txtQty.getText());
-
-            JasperPrint jasperPrint =
-                    JasperFillManager.fillReport(
-                            jasperReport,
-                            data,
-                            DbConnection.getInstance().getConnection());
-
-            JasperViewer.viewReport(jasperPrint, false);
-        }
-    }
-
 
     public void txtAContactOnKeyReleased() {
         Regex.setTextColor(TextField.CONTACT, txtContact);
@@ -409,6 +405,20 @@ public class PlaceOrderFormController {
             txtName.setText(selectedItem.getName());
             txtUnitPrice.setText(String.valueOf(selectedItem.getUnitPrice()));
             menuPane.setVisible(false);
+        }
+    }
+
+    public void txtSearchOrderOnKeyEvent(KeyEvent keyEvent) throws SQLException {
+        Order order = OrderRepo.searchById(txtOrderId.getText());
+        if (order!=null){
+            txtTableNo.setText(String.valueOf(order.getTableNo()));
+            txtDate.setText(order.getDate());
+            cmbOrderType.setValue(order.getOrderType());
+            txtCustomerId.setText(order.getCusId());
+            txtNetTotal.setText(String.valueOf(order.getTotal()));
+            txtServiceCharge.setText(String.valueOf(order.getServiceCharge()));
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Empty Data..!").show();
         }
     }
 }

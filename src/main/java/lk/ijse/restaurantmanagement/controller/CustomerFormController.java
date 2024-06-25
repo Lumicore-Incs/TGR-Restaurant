@@ -139,6 +139,7 @@ public class CustomerFormController {
         txtAddress.setText("");
         txtContact.setText("");
         txtEmail.setText("");
+        initialize();
     }
 
     @FXML

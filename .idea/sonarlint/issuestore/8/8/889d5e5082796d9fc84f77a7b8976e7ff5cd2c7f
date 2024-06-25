@@ -1,3 +1,10 @@
 
-	java:S112Ğ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8úâ×Û„2J$42a25b68-e52b-463f-abff-f0950b324784
-m	java:S106É"+Replace this use of System.out by a logger.(¸ØïU8—ä×Û„2J$a1dd70f4-f79d-4fce-bfb2-8a8a8fa7d852
+	java:S112ã"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÜñÃ‰…2J$f3691ebf-a855-404d-a7c6-4244f7dbe734
+x
+java:S3740Ô"/Provide the parametrized type for this generic.(ïª¢„úÿÿÿÿ8İñÃ‰…2J$11259aef-7e30-47d7-8450-279a8d5bcb3b
+s	java:S106É"+Replace this use of System.out by a logger.(ÓÃøòúÿÿÿÿ8œòÃ‰…2J$673b687a-bda2-45a8-83b9-5a7fdb369d7d
+m	java:S106Ï"+Replace this use of System.out by a logger.(¸ØïU8¯òÃ‰…2J$c6c56ac7-b7c5-495d-b6ea-1760a74a3f4a
+s
+java:S1172›"/Remove this unused method parameter "keyEvent".(–ØÀ8¹òÃ‰…2J$fd3db43f-f7b5-4cec-9176-35515f95655f
+‘
+java:S1128"IRemove this unused import 'lk.ijse.restaurantmanagement.db.DbConnection'.(Ùíßõşÿÿÿÿ8˜±Ç‰…2J$7398d5fc-06b7-4cfe-b11d-951783e67006

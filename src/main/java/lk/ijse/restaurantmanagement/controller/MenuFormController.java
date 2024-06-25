@@ -153,7 +153,7 @@ public class MenuFormController {
         }
     }
 
-    public void btnSaveOnAction() {
+    public void btnSaveOnAction() throws SQLException {
         if (isValidate()) {
             String id = txtId.getText();
             String name = txtName.getText();
@@ -161,20 +161,22 @@ public class MenuFormController {
             String unitPrice = txtUnitPrice.getText();
             String status = String.valueOf(cmbStatus.getValue());
 
-            Menu menu = new Menu(id, name, qtyOnHand, unitPrice, status);
-
-            try {
-
-                boolean isSaved = MenuRepo.save(menu);
-                if (isSaved) {
-                    new Alert(Alert.AlertType.CONFIRMATION, "Menu saved!").show();
-                    clearFields();
+            if (MenuRepo.isExit(name, qtyOnHand)==null) {
+                Menu menu = new Menu(id, name, qtyOnHand, unitPrice, status);
+                try {
+                    boolean isSaved = MenuRepo.save(menu);
+                    if (isSaved) {
+                        new Alert(Alert.AlertType.CONFIRMATION, "Menu saved!").show();
+                        clearFields();
+                    }
+                } catch (SQLException e) {
+                    new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
                 }
-            } catch (SQLException e) {
-                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+                clearFields();
+                initialize();
+            } else {
+                new Alert(Alert.AlertType.INFORMATION, "All Ready Exits..!").show();
             }
-            clearFields();
-            initialize();
         }
     }
 
@@ -224,6 +226,7 @@ public class MenuFormController {
         txtQtyOnHand.setValue("");
         txtUnitPrice.setText("");
         cmbStatus.setValue("");
+        initialize();
     }
 
     public boolean isValidate() {
