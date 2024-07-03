@@ -38,7 +38,7 @@ public class MenuFormController {
     public JFXTextField txtName;
 
     private List<Menu> menuList = new ArrayList<>();
-    private final String[] size = {"Full", "Harf", "Budget"};
+    private final String[] size = {"Full", "Harf", "Budget", "Normal"};
 
     public void initialize() {
         try {

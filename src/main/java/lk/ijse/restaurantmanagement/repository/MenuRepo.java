@@ -71,6 +71,24 @@ public class MenuRepo {
         return null;
     }
 
+    public static Menu serchByMenuId(String itemId) throws SQLException {
+        String sql = "SELECT * FROM menu WHERE id=?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setObject(1,itemId);
+        ResultSet resultSet = pstm.executeQuery();
+        if (resultSet.next()) {
+            String id = resultSet.getString(1);
+            String name = resultSet.getString(2);
+            String size = resultSet.getString(3);
+            String unitPrice = resultSet.getString(4);
+            String status = resultSet.getString(5);
+
+            return new Menu(id, name, size, unitPrice, status);
+        }else {
+            return null;
+        }
+    }
+
     public String autoGenerateItemCode() throws SQLException {
         String sql = "SELECT id from menu order by id desc limit 1";
         PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);

@@ -63,6 +63,7 @@ orderId varchar (10),
 menuId varchar (10),
 qty int (10),
 unitPrice decimal(12),
+itemTotal double,
 foreign key(orderId) references Orders(orderId) on update cascade on delete cascade,
 foreign key(menuId) references Menu(id) on update cascade on delete cascade
 );
@@ -152,5 +153,4 @@ password int (10)
 
 select order_details.*, menu.name, menu.size, menu.unitPrice,(order_details.unitPrice*order_details.qty) as total from order_details inner join menu on order_details.menuId=menu.id where order_details.orderId="Od001";
 
-select order_details.*, menu.name, menu.size, menu.unitPrice,(order_details.unitPrice*order_details.qty) as total, orders.date, orders.total, orders.tableId, orders.serviceCharge from order_details inner join menu on order_details.me
-nuId=menu.id join orders on orders.orderid=order_details.orderid where order_details.orderId="Od001";
+select order_details.*, menu.name, menu.size, menu.unitPrice,(order_details.unitPrice*order_details.qty) as total, orders.date, orders.total, orders.tableId, orders.serviceCharge from order_details inner join menu on order_details.menuId=menu.id join orders on orders.orderid=order_details.orderid where order_details.orderId="Od001";

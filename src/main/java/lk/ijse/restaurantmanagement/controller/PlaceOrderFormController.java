@@ -5,18 +5,16 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Cursor;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
 import lk.ijse.restaurantmanagement.db.DbConnection;
-import lk.ijse.restaurantmanagement.model.*;
 import lk.ijse.restaurantmanagement.model.Menu;
+import lk.ijse.restaurantmanagement.model.*;
 import lk.ijse.restaurantmanagement.model.tm.CartTm;
 import lk.ijse.restaurantmanagement.repository.*;
 import lk.ijse.restaurantmanagement.util.Regex;
@@ -26,13 +24,16 @@ import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
-import java.io.IOException;
+import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
 
 public class PlaceOrderFormController {
+    private final ObservableList<CartTm> cartList = FXCollections.observableArrayList();
+    private final String[] typeList = {"takeAway", "dineIn"};
+    private final double netTotal = 0;
     public Pane menuPane;
     public TableView<CartTm> tblMenuItem;
     public TableColumn<?, ?> colName;
@@ -40,64 +41,44 @@ public class PlaceOrderFormController {
     public JFXTextField txtCustomerId;
     public JFXTextField txtServiceCharge;
     public JFXTextField txtTableNo;
+    public JFXButton btnPlaceOrder;
+    public JFXButton btnDelete;
     @FXML
     private AnchorPane root;
-
     @FXML
     private TableColumn<?, ?> colAction;
-
     @FXML
     private TableColumn<?, ?> colDescription;
-
     @FXML
     private TableColumn<?, ?> colItemCode;
-
     @FXML
     private TableColumn<?, ?> colQty;
-
     @FXML
     private TableColumn<?, ?> colTotal;
-
     @FXML
     private TableColumn<?, ?> colUnitPrice;
     @FXML
     private TableColumn<?, ?> colDate;
-
     @FXML
     private TableView<CartTm> tblOrderCart;
-
     @FXML
     private JFXTextField txtContact;
-
     @FXML
     private JFXTextField txtCustomerName;
-
     @FXML
     private JFXTextField txtDate;
-
     @FXML
     private JFXTextField txtId;
-
     @FXML
     private JFXTextField txtNetTotal;
-
     @FXML
     private JFXTextField txtOrderId;
-
     @FXML
     private JFXTextField txtQty;
-
     @FXML
     private JFXTextField txtUnitPrice;
-
     @FXML
     private ComboBox<String> cmbOrderType;
-
-
-    private final ObservableList<CartTm> cartList = FXCollections.observableArrayList();
-    private final String[] typeList = {"takeAway", "dineIn"};
-    private double netTotal = 0;
-
 
     public void initialize() {
         setCellValueFactory();
@@ -110,7 +91,8 @@ public class PlaceOrderFormController {
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
-
+        btnPlaceOrder.setText("Place Order");
+        btnDelete.setVisible(false);
     }
 
     public void getOrderList() {
@@ -122,7 +104,6 @@ public class PlaceOrderFormController {
 
     private void loadTable() {
         ObservableList<CartTm> tmList = FXCollections.observableArrayList();
-
         for (CartTm cart : cartList) {
             CartTm cartTm = new CartTm(
                     cart.getId(),
@@ -158,19 +139,38 @@ public class PlaceOrderFormController {
     @FXML
     void btnAddToCartOnAction() {
         if (isValidate()) {
-            if (txtQty.getText()!=null && cmbOrderType.getValue()!=null && txtId.getText()!=null){
+            if (txtQty.getText() != null && cmbOrderType.getValue() != null && txtId.getText() != null) {
                 String id = txtId.getText();
                 String description = txtName.getText();
                 double unitPrice = Double.parseDouble(txtUnitPrice.getText());
                 String date = txtDate.getText();
+
+                int qty = Integer.parseInt(txtQty.getText());
+                double total = qty * unitPrice;
+
+                // Check if the item is already in the cart
+                for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
+                    if (id.equals(colItemCode.getCellData(i))) {
+                        qty += cartList.get(i).getQty();
+                        total = unitPrice * qty;
+                        cartList.get(i).setQty(qty);
+                        cartList.get(i).setTotal(total);
+
+                        tblOrderCart.refresh();
+                        calculateNetTotal();
+                        txtQty.setText("");
+                        clear();
+                        return;
+                    }
+                }
+
+                // Create a new remove button for this cart item
                 JFXButton btnRemove = new JFXButton("remove");
                 btnRemove.setStyle("-fx-background-radius:10px; -fx-background-color: grey");
                 btnRemove.setCursor(Cursor.HAND);
-                int qty= Integer.parseInt(txtQty.getText());
-                double total = qty * unitPrice;
                 btnRemove.setOnAction(e -> {
-                    ButtonType yes = new ButtonType("yes", ButtonBar.ButtonData.OK_DONE);
-                    ButtonType no = new ButtonType("no", ButtonBar.ButtonData.CANCEL_CLOSE);
+                    ButtonType yes = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
+                    ButtonType no = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
 
                     Optional<ButtonType> type = new Alert(Alert.AlertType.INFORMATION, "Are you sure to remove?", yes, no).showAndWait();
 
@@ -183,38 +183,23 @@ public class PlaceOrderFormController {
                     }
                 });
 
-                for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
-                    if (id.equals(colItemCode.getCellData(i))) {
-                        qty += cartList.get(i).getQty();
-                        total = unitPrice * qty;
-                        cartList.get(i).setQty(qty);
-                        cartList.get(i).setTotal(total);
-
-                        tblOrderCart.refresh();
-                        calculateNetTotal();
-                        txtQty.setText("");
-                        return;
-                    }
-                    clear();
-                    clearFields();
-                }
-                System.out.println("to "+total);
+                // Add the new item to the cart
                 CartTm cartTm = new CartTm(id, description, qty, unitPrice, total, date, btnRemove);
-
                 cartList.add(cartTm);
-
                 tblOrderCart.setItems(cartList);
                 txtQty.setText("");
+                clear();
                 calculateNetTotal();
-            }else {
-                new Alert(Alert.AlertType.ERROR,"enter another data.!").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Enter all required data!").show();
             }
+
         }
 
     }
 
     private void calculateNetTotal() {
-        double fullTotal=0;
+        double fullTotal = 0;
         for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
             fullTotal += (double) colTotal.getCellData(i);
         }
@@ -222,28 +207,22 @@ public class PlaceOrderFormController {
     }
 
     @FXML
-    void btnBackOnAction() throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/main_form.fxml")));
-        Stage stage = (Stage) root.getScene().getWindow();
-
-        stage.setScene(new Scene(anchorPane));
-        stage.setTitle("Dashboard Form");
-        stage.centerOnScreen();
-    }
-
-    @FXML
-    void btnPlaceOrderOnAction() {
+    void btnPlaceOrderOnAction() throws JRException {
         if (isValidate()) {
             String orderId = txtOrderId.getText();
             String orderType = String.valueOf(cmbOrderType.getValue());
             String cusId = txtCustomerId.getText();
             String date = String.valueOf(Date.valueOf(LocalDate.now()));
-            int tableNo = Integer.parseInt(txtTableNo.getText());
+            int tableNo = 0;
+            if (txtTableNo.getText() != null) {
+                tableNo = Integer.parseInt(txtTableNo.getText());
+            }
             String service = txtServiceCharge.getText();
 
-            if (service!=null){
-                double serviceCharge= Double.parseDouble(service);
-                var order = new Order(orderId, orderType, cusId, date, netTotal+serviceCharge, tableNo, serviceCharge);
+            if (service != null) {
+                double serviceCharge = Double.parseDouble(service);
+                double value = Double.parseDouble(txtNetTotal.getText()) + serviceCharge;
+                var order = new Order(orderId, orderType, cusId, date, value, tableNo, serviceCharge);
 
                 List<OrderDetail> odList = new ArrayList<>();
                 for (int i = 0; i < tblOrderCart.getItems().size(); i++) {
@@ -260,19 +239,34 @@ public class PlaceOrderFormController {
 
                 PlaceOrder po = new PlaceOrder(order, odList);
                 try {
-                    boolean isPlaced = PlaceOrderRepo.placeOrder(po);
-                    if (isPlaced) {
-                        new Alert(Alert.AlertType.CONFIRMATION, "order placed!").show();
-                        autoGenerateId();
-                        clearFields();
-                    } else {
-                        new Alert(Alert.AlertType.WARNING, "order not placed!").show();
+                    if (btnPlaceOrder.getText().equals("Place Order")){
+                        boolean isPlaced = PlaceOrderRepo.placeOrder(po);
+                        if (isPlaced) {
+                            new Alert(Alert.AlertType.CONFIRMATION, "order placed!").show();
+                            tblOrderCart.getItems().clear();
+                            btnReceiptOnAction();
+                            clearFields();
+                            autoGenerateId();
+                        } else {
+                            new Alert(Alert.AlertType.WARNING, "order not placed!").show();
+                        }
+                    }else {
+                        boolean isPlaced = PlaceOrderRepo.placeOrderUpdate(po);
+                        if (isPlaced) {
+                            new Alert(Alert.AlertType.CONFIRMATION, "order Update!").show();
+                            tblOrderCart.getItems().clear();
+                            btnReceiptOnAction();
+                            clearFields();
+                            autoGenerateId();
+                        } else {
+                            new Alert(Alert.AlertType.WARNING, "order not placed!").show();
+                        }
                     }
                 } catch (SQLException e) {
                     new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
                 }
-            }else {
-                new Alert(Alert.AlertType.ERROR,"Enter Service Charge..!").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Enter Service Charge..!").show();
             }
         }
     }
@@ -288,11 +282,11 @@ public class PlaceOrderFormController {
 
         try {
             Customer customer = CustomerRepo.searchByContact(contact);
-            if (customer!=null){
+            if (customer != null) {
                 txtCustomerId.setText(customer.getCusId());
                 txtCustomerName.setText(customer.getName());
-            }else {
-                new Alert(Alert.AlertType.ERROR,"No Customer..!").show();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "No Customer..!").show();
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -323,44 +317,53 @@ public class PlaceOrderFormController {
         txtNetTotal.setText("");
         txtServiceCharge.setText("");
         txtTableNo.setText("");
+        initialize();
     }
 
     private void clear() {
         txtId.setText("");
         txtName.setText("");
         txtUnitPrice.setText("");
+        txtQty.clear();
+        txtCustomerId.clear();
+        txtContact.clear();
+        txtContact.clear();
     }
 
     public void btnReceiptOnAction() throws JRException, SQLException {
-        System.out.println("1");
         String orderId = txtOrderId.getText();
         Order order = OrderRepo.searchById(orderId);
-        if (order!=null) {
+        if (order != null) {
             try {
-                HashMap data = new HashMap<>();
-                data.put("orderId", orderId);
-                data.put("id", orderId);
-                data.put("tableNo", order.getTableNo());
-                data.put("date", order.getDate() );
-                data.put("time", LocalDate.now());
-                data.put("total", order.getTotal()-order.getServiceCharge());
-                data.put("serviceCharge", order.getServiceCharge());
-                data.put("netTotal", order.getTotal());
+                Map<String, Object> data = new HashMap<>();
+                data.put("OrderId", orderId); // Ensure the key matches the parameter name in the report
 
-                JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/reports/OrderForm.jrxml"));
+                JasperDesign load = JRXmlLoader.load(this.getClass().getResourceAsStream("/reports/newReport.jrxml"));
                 JasperReport jasperReport = JasperCompileManager.compileReport(load);
-                JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, data, new JREmptyDataSource());
-                JasperViewer.viewReport(jasperPrint, false);
+                Connection connection = DbConnection.getInstance().getConnection();
+
+
+                JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, data, connection);
+
+                // Check if the report contains any pages
+                if (jasperPrint.getPages().isEmpty()) {
+                    new Alert(Alert.AlertType.INFORMATION, "No data found for the given Order ID.").show();
+                } else {
+                    JasperViewer.viewReport(jasperPrint, false);
+                }
             } catch (JRException e) {
-                throw new RuntimeException(e);
+                new Alert(Alert.AlertType.INFORMATION, e.getMessage()).show();
             }
+        } else {
+            new Alert(Alert.AlertType.INFORMATION, "Order not found.").show();
         }
     }
 
     public void txtAContactOnKeyReleased() {
         Regex.setTextColor(TextField.CONTACT, txtContact);
     }
-    public boolean isValidate(){
+
+    public boolean isValidate() {
         Regex.setTextColor(TextField.CONTACT, txtContact);
         Regex.setTextColor(TextField.QTY, txtQty);
         return true;
@@ -385,7 +388,7 @@ public class PlaceOrderFormController {
                 }
                 tblMenuItem.setItems(tmList);
                 CartTm selectedItem = tblMenuItem.getSelectionModel().getSelectedItem();
-                if (selectedItem!=null){
+                if (selectedItem != null) {
                     txtId.setText(selectedItem.getId());
                     txtName.setText(selectedItem.getName());
                     menuPane.setVisible(false);
@@ -393,6 +396,7 @@ public class PlaceOrderFormController {
             } catch (SQLException e) {
                 new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
+            clear();
         } else {
             initialize();
         }
@@ -400,7 +404,7 @@ public class PlaceOrderFormController {
 
     public void tblClickOnAction() {
         CartTm selectedItem = tblMenuItem.getSelectionModel().getSelectedItem();
-        if (selectedItem!=null){
+        if (selectedItem != null) {
             txtId.setText(selectedItem.getId());
             txtName.setText(selectedItem.getName());
             txtUnitPrice.setText(String.valueOf(selectedItem.getUnitPrice()));
@@ -409,16 +413,63 @@ public class PlaceOrderFormController {
     }
 
     public void txtSearchOrderOnKeyEvent(KeyEvent keyEvent) throws SQLException {
-        Order order = OrderRepo.searchById(txtOrderId.getText());
-        if (order!=null){
-            txtTableNo.setText(String.valueOf(order.getTableNo()));
-            txtDate.setText(order.getDate());
-            cmbOrderType.setValue(order.getOrderType());
-            txtCustomerId.setText(order.getCusId());
-            txtNetTotal.setText(String.valueOf(order.getTotal()));
-            txtServiceCharge.setText(String.valueOf(order.getServiceCharge()));
+        JFXButton btnRemove = new JFXButton("remove");
+        if (keyEvent.getCode() == KeyCode.ENTER) {
+            Order order = OrderRepo.searchById(txtOrderId.getText());
+            if (order != null) {
+                txtTableNo.setText(String.valueOf(order.getTableNo()));
+                txtDate.setText(order.getDate());
+                cmbOrderType.setValue(order.getOrderType());
+                txtCustomerId.setText(order.getCusId());
+                txtNetTotal.setText(String.valueOf(order.getTotal()));
+                txtServiceCharge.setText(String.valueOf(order.getServiceCharge()));
+                List<OrderDetail> list = OrderDetailRepo.searchByOrderid(order.getOrderId());
+
+                for (OrderDetail dto : list) {
+                    Menu menu = MenuRepo.serchByMenuId(dto.getItemId());
+                    if (menu!=null){
+                        CartTm cartTm = new CartTm(
+                                dto.getItemId(),
+                                menu.getName(),
+                                dto.getQty(),
+                                dto.getUnitPrice(),
+                                dto.getQty() * dto.getUnitPrice(),
+                                order.getDate(),
+                                btnRemove
+                        );
+                        cartList.add(cartTm);
+                        tblOrderCart.setItems(cartList);
+                    }
+                }
+
+                btnRemove.setOnAction(e -> {
+                    ButtonType yes = new ButtonType("yes", ButtonBar.ButtonData.OK_DONE);
+                    ButtonType no = new ButtonType("no", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+                    Optional<ButtonType> type = new Alert(Alert.AlertType.INFORMATION, "Are you sure to remove?", yes, no).showAndWait();
+
+                    if (type.orElse(no) == yes) {
+                        CartTm selectedItem = tblOrderCart.getSelectionModel().getSelectedItem();
+                        cartList.remove(selectedItem);
+                        tblOrderCart.refresh();
+                        loadTable();
+                        calculateNetTotal();
+                    }
+                });
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Empty Data..!").show();
+            }
+        }
+        btnPlaceOrder.setText("Update Order");
+        btnDelete.setVisible(true);
+    }
+
+    public void btnDeleteOnAction() throws SQLException {
+        boolean isDelete=PlaceOrderRepo.deletePlaceOrder(txtOrderId.getText());
+        if (isDelete){
+            new Alert(Alert.AlertType.CONFIRMATION,"Order Delete..!").show();
         }else {
-            new Alert(Alert.AlertType.ERROR,"Empty Data..!").show();
+            new Alert(Alert.AlertType.ERROR,"Something Wrong..!").show();
         }
     }
 }

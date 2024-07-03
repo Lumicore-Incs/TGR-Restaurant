@@ -55,7 +55,26 @@ public class OrderRepo {
             orders = new Order(orderid, orderType, cusId, date, total, tableNo, serviceCharge);
         }
         return orders;
+    }
 
+    public static boolean update(Order order) throws SQLException {
+        String sql = "update orders set orderType=?, cusId=?, date=?, total=?, tableId=?, serviceCharge=? where orderId=?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setString(7, order.getOrderId());
+        pstm.setString(1, order.getOrderType());
+        pstm.setString(2, order.getCusId());
+        pstm.setString(3, order.getDate());
+        pstm.setString(4, String.valueOf(order.getTotal()));
+        pstm.setString(5, String.valueOf(order.getTableNo()));
+        pstm.setString(6, String.valueOf(order.getServiceCharge()));
+        return pstm.executeUpdate() > 0;
+    }
+
+    public static boolean deleteOrder(String orderId) throws SQLException {
+        String sql = "delete from orders where orderId=?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
+        pstm.setObject(1,orderId);
+        return pstm.executeUpdate()>0;
     }
 
     public String autoGenerateOrderId() throws SQLException {
