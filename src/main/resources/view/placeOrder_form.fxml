@@ -23,7 +23,7 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="22.0" layoutY="537.0" text="Qty:" textFill="WHITE">
+      <Label layoutX="22.0" layoutY="571.0" text="Qty:" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -166,7 +166,7 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtQty" layoutX="82.0" layoutY="532.0" onAction="#txtQtyOnAction" prefHeight="33.0" prefWidth="76.0" style="-fx-text-fill: white;">
+      <JFXTextField fx:id="txtQty" layoutX="82.0" layoutY="566.0" onAction="#txtQtyOnAction" prefHeight="33.0" prefWidth="76.0" style="-fx-text-fill: white;">
          <font>
             <Font size="16.0" />
          </font>
@@ -176,11 +176,12 @@
             <Font size="16.0" />
          </font>
       </JFXTextField>
-      <Pane fx:id="menuPane" layoutX="139.0" layoutY="406.0" prefHeight="170.0" prefWidth="237.0" style="-fx-background-color: white;">
+      <Pane fx:id="menuPane" layoutX="139.0" layoutY="406.0" prefHeight="170.0" prefWidth="356.0" style="-fx-background-color: white;">
          <children>
-            <TableView fx:id="tblMenuItem" layoutY="1.0" onMouseClicked="#tblClickOnAction" prefHeight="170.0" prefWidth="236.0">
+            <TableView fx:id="tblMenuItem" layoutY="1.0" onMouseClicked="#tblClickOnAction" prefHeight="170.0" prefWidth="356.0">
               <columns>
-                <TableColumn fx:id="colName" prefWidth="303.0" text="Name" />
+                <TableColumn fx:id="colName" prefWidth="270.0" text="Name" />
+                  <TableColumn fx:id="colSize" prefWidth="85.0" text="Size" />
               </columns>
             </TableView>
          </children>
@@ -215,5 +216,15 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
+      <Label layoutX="22.0" layoutY="519.0" text="Size : " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSize" layoutX="119.0" layoutY="512.0" prefHeight="30.0" prefWidth="100.0" style="-fx-text-fill: white;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>

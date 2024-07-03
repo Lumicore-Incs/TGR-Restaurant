@@ -89,6 +89,18 @@ public class MenuRepo {
         }
     }
 
+    public static int getMenuCount() throws SQLException {
+        String sql = "SELECT COUNT(*) AS menu_count FROM menu";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        int menuCount = 0;
+        if (resultSet.next()) {
+            menuCount = resultSet.getInt("menu_count");
+        }
+        return menuCount;
+    }
+
     public String autoGenerateItemCode() throws SQLException {
         String sql = "SELECT id from menu order by id desc limit 1";
         PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
