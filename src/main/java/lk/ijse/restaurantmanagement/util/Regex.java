@@ -15,7 +15,7 @@ public class Regex  {
                 field = "^([A-Z][0-9]{3})$";
                 break;
             case NAME:
-                field = "^(([A-z- |\\\\\\s]{3,})| ([\\\\\\s][A-z- |\\\\\\s]{3,}))$";
+                field = "^(([A-z- 0-9|\\\\\\s]{3,})| ([\\\\\\s][A-z- |\\\\\\s]{3,}))$";
                 break;
             case PW:
                 field = "^([\\d]{8}|[\\d]{2}|[\\d]{1})$";

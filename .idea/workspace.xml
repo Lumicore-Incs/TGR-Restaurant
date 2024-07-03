@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Restaurant-Management:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="100d1abc-bba4-44b3-b170-85d27a522464" name="Changes" comment="add content">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/1918abd785992c5e93164fba9813a303927de9f8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/1918abd785992c5e93164fba9813a303927de9f8" afterDir="false" />
+    <list default="true" id="100d1abc-bba4-44b3-b170-85d27a522464" name="Changes" comment="fix bug">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0ef69358547084e7d06307030d13920588c1a89f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0ef69358547084e7d06307030d13920588c1a89f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/112d343930dbe0dc1e07b6361c04ff819e1bd106" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/112d343930dbe0dc1e07b6361c04ff819e1bd106" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c127bb376821c2155179cc2f730b7bc4d5772a4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c127bb376821c2155179cc2f730b7bc4d5772a4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f522980f34d350cbe306c8ffb3e1fd91a260628" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f522980f34d350cbe306c8ffb3e1fd91a260628" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/87a84e9015e05f58d36cda893e471d5918fa3f60" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/7/87a84e9015e05f58d36cda893e471d5918fa3f60" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/889d5e5082796d9fc84f77a7b8976e7ff5cd2c7f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/889d5e5082796d9fc84f77a7b8976e7ff5cd2c7f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa1871c7f9a5cb8862bf5e72df849dc88966b580" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa1871c7f9a5cb8862bf5e72df849dc88966b580" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/ItemFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MainFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Restaurant_Management_jar/Restaurant-Management.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MenuFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/MenuFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/controller/PlaceOrderFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/MenuRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/MenuRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/OrderDetailRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/OrderDetailRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/OrderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/OrderRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/PlaceOrderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/repository/PlaceOrderRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/util/Regex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/restaurantmanagement/util/Regex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/query.sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/query.sql.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/main_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/main_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/placeOrder_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/placeOrder_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -53,18 +67,24 @@
   &quot;keyToString&quot;: {
     &quot;Application.LauncherWrapper.executor&quot;: &quot;Run&quot;,
     &quot;Application.application.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.TMR system.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.Restaurant-Management [install].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/modify-ui&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/order-crud-implementation&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/lumicore inc/project/TGR-Restaurant/src/main/resources/view&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/lumicore inc/project/TGR-Restaurant/src/main/resources/reports&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41494253&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -78,10 +98,15 @@
       <recent name="lk.ijse.restaurantmanagement" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\reports" />
+      <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\reports\test" />
+      <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\assets" />
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\view" />
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\assets\icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\reports\test" />
+      <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\reports" />
       <recent name="D:\lumicore inc\project\TGR-Restaurant\src\main\resources\assets.icon" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -90,7 +115,7 @@
       <recent name="lk.ijse.restaurantmanagement.model.tm" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.application">
     <configuration name="application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="lk.ijse.restaurantmanagement.LauncherWrapper" />
       <module name="Restaurant-Management" />
@@ -98,6 +123,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TMR system" type="JarApplication">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/Restaurant-Management-1.0-SNAPSHOT.jar" />
+      <option name="WORKING_DIRECTORY" value="D:\lumicore inc\project\TGR-Restaurant" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Restaurant-Management:jar" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.application" />
+      <item itemvalue="JAR Application.TMR system" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -119,6 +158,17 @@
       <workItem from="1718099648924" duration="7399000" />
       <workItem from="1718375579679" duration="1316000" />
       <workItem from="1718389259264" duration="2221000" />
+      <workItem from="1719205312679" duration="248000" />
+      <workItem from="1719242121785" duration="6258000" />
+      <workItem from="1719253864354" duration="1526000" />
+      <workItem from="1719261891007" duration="1807000" />
+      <workItem from="1719329472691" duration="7050000" />
+      <workItem from="1719338298215" duration="10273000" />
+      <workItem from="1719368771664" duration="2627000" />
+      <workItem from="1719379855599" duration="10674000" />
+      <workItem from="1719570473451" duration="6000" />
+      <workItem from="1719593680150" duration="11622000" />
+      <workItem from="1720010315043" duration="6650000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <option name="closed" value="true" />
@@ -144,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718371942627</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix bug">
+      <option name="closed" value="true" />
+      <created>1719350235010</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719350235010</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +213,12 @@
     <MESSAGE value="login page complete" />
     <MESSAGE value="salary page complete" />
     <MESSAGE value="add content" />
-    <option name="LAST_COMMIT_MESSAGE" value="add content" />
+    <MESSAGE value="update" />
+    <MESSAGE value="fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

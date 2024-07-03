@@ -10,41 +10,41 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="1255.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.MainFormController">
+<AnchorPane fx:id="mainPane" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.MainFormController">
    <children>
       <AnchorPane fx:id="sidePane" prefHeight="700.0" prefWidth="255.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#131313f5" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="255.0" />
-      <Label alignment="CENTER" layoutX="32.0" layoutY="37.0" prefHeight="72.0" prefWidth="201.0" text="Welcome" textAlignment="CENTER" textFill="#aea5a5" underline="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#131313f5" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <Label alignment="CENTER" layoutX="-4.0" layoutY="41.0" prefHeight="72.0" prefWidth="201.0" text="Welcome" textAlignment="CENTER" textFill="#aea5a5" underline="true">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Button layoutX="41.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="CUSTOMER" textFill="WHITE">
+      <Button layoutX="24.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="CUSTOMER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="39.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="EMPLOYEE" textFill="WHITE">
+      <Button layoutX="22.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="EMPLOYEE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="39.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="STOCK" textFill="WHITE">
+      <Button layoutX="22.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnItemOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="STOCK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="39.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnSalaryOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="SALARY" textFill="WHITE">
+      <Button layoutX="22.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnSalaryOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="SALARY" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="40.0" layoutY="471.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="ORDER" textFill="WHITE">
+      <Button layoutX="23.0" layoutY="471.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="ORDER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <JFXButton buttonType="RAISED" layoutX="32.0" layoutY="646.0" onAction="#btnExitOnAction" prefHeight="40.0" prefWidth="174.0" style="-fx-background-color: #31363F; -fx-background-radius: 20;" text="Exit" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="646.0" onAction="#btnExitOnAction" prefHeight="40.0" prefWidth="155.0" style="-fx-background-color: #31363F; -fx-background-radius: 20;" text="Exit" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -52,58 +52,58 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <AnchorPane fx:id="root" layoutX="263.0" prefHeight="700.0" prefWidth="1000.0" />
-      <Button layoutX="41.0" layoutY="132.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="DASHBOARD" textFill="WHITE">
+      <AnchorPane fx:id="root" layoutX="200.0" prefHeight="700.0" prefWidth="700.0" />
+      <Button layoutX="24.0" layoutY="132.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="DASHBOARD" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="37.0" layoutY="587.0" mnemonicParsing="false" onAction="#btnTablesOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="TABLES" textFill="WHITE" AnchorPane.bottomAnchor="74.0">
+      <Button layoutX="20.0" layoutY="587.0" mnemonicParsing="false" onAction="#btnTablesOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="TABLES" textFill="WHITE" AnchorPane.bottomAnchor="74.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="45.0" layoutY="140.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="25.0" layoutY="140.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/dashboard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="47.0" layoutY="196.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="27.0" layoutY="196.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/customer.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="48.0" layoutY="253.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="28.0" layoutY="253.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/employee.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="43.0" layoutY="422.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="23.0" layoutY="422.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/item.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="47.0" layoutY="596.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="33.0" layoutY="596.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icons8-side-table-32.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="47.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="27.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/salary.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="17.0" layoutX="46.0" layoutY="482.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="23.0" fitWidth="17.0" layoutX="26.0" layoutY="482.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/order.png" />
          </image>
       </ImageView>
-      <Button layoutX="39.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnMenuOnAction" prefHeight="30.0" prefWidth="173.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="MENU" textFill="WHITE">
+      <Button layoutX="22.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnMenuOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="MENU" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="39.0" fitWidth="23.0" layoutX="47.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="39.0" fitWidth="23.0" layoutX="27.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/item.png" />
          </image>

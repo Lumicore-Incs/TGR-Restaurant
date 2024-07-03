@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -16,6 +17,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
@@ -69,7 +71,7 @@ public class DashboardFormController {
         setItemCount(itemCount);
         setEmployeeCount(employeeCount);
 
-         OrderRepo.OrdersCount(barChartOrders);
+         OrderRepo.ordersCount(barChartOrders);
     }
 
 
@@ -80,9 +82,10 @@ public class DashboardFormController {
                 try {
                     Thread.sleep(1000);
                 }catch (Exception e){
-                    System.out.println(e);
+                    new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
                 }
                final String timenow = sdf.format(new Date());
+                LocalTime now = LocalTime.now();
                 Platform.runLater(()->{
                   lblTime.setText(timenow);
                 });
@@ -94,7 +97,7 @@ public class DashboardFormController {
     private void setItemCount(int itemCount) {
         lblItemCount.setText(String.valueOf(itemCount));
     }
-    
+
     private void setCustomerCount(int customerCount) {
         lblCustomerCount.setText(String.valueOf(customerCount));
     }
