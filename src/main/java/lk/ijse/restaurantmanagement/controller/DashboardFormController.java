@@ -1,32 +1,19 @@
 package lk.ijse.restaurantmanagement.controller;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import lk.ijse.restaurantmanagement.repository.*;
 
-
-import java.io.IOException;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class DashboardFormController {
-    @FXML
-    private AnchorPane bodyPane;
-
-    @FXML
-    private AnchorPane root;
 
     @FXML
     private Label lblCustomerCount;
@@ -53,11 +40,10 @@ public class DashboardFormController {
     private BarChart<String, Number> barChartOrders;
 
     public void initialize() throws SQLException {
-
         timeNow();
         LocalDate date = LocalDate.now();
-        DateTimeFormatter dateformatter = DateTimeFormatter.ofPattern("EEEE, MMM dd");
-        String formattedDate = date.format(dateformatter);
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("EEEE, MMM dd");
+        String formattedDate = date.format(dateFormatter);
         lblDate.setText(formattedDate);
 
         try {
@@ -65,12 +51,11 @@ public class DashboardFormController {
             employeeCount = EmployeeRepo.getEmployeeCount();
             itemCount = ItemRepo.getItemCount();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
         }
         setCustomerCount(customerCount);
         setItemCount(itemCount);
         setEmployeeCount(employeeCount);
-
          OrderRepo.ordersCount(barChartOrders);
     }
 
@@ -85,7 +70,6 @@ public class DashboardFormController {
                     new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
                 }
                final String timenow = sdf.format(new Date());
-                LocalTime now = LocalTime.now();
                 Platform.runLater(()->{
                   lblTime.setText(timenow);
                 });
@@ -106,16 +90,4 @@ public class DashboardFormController {
     private void setEmployeeCount(int employeeCount) {
         lblEmployeeCount.setText(String.valueOf(employeeCount));
     }
-
-    public void btnBackOnAction(ActionEvent actionEvent) throws IOException {
-        AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/login_form.fxml"));
-
-        Scene scene = new Scene(rootNode);
-
-        Stage stage = (Stage) this.root.getScene().getWindow();
-        stage.setScene(scene);
-        stage.setTitle("Login Form");
-    }
-
-
 }

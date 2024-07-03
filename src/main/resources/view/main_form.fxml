@@ -58,7 +58,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="20.0" layoutY="587.0" mnemonicParsing="false" onAction="#btnTablesOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="TABLES" textFill="WHITE" AnchorPane.bottomAnchor="74.0">
+      <Button layoutX="20.0" layoutY="587.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="30.0" prefWidth="155.0" style="-fx-background-radius: 10; -fx-background-color: #994D1C;" text="Report" textFill="WHITE" AnchorPane.bottomAnchor="74.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -81,11 +81,6 @@
       <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="23.0" layoutY="422.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/icon/item.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="33.0" layoutY="596.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/icons8-side-table-32.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="27.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">

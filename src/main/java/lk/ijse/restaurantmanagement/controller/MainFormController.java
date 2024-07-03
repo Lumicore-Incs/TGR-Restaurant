@@ -82,22 +82,8 @@ public class MainFormController {
         root.getChildren().add(registerPane);
     }
 
-    public void btnTablesOnAction() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/tables_form.fxml"));
-        Pane registerPane = fxmlLoader.load();
-        root.getChildren().clear();
-        root.getChildren().add(registerPane);
-    }
-
-    public void btnPaymentOnAction() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/payment_form.fxml"));
-        Pane registerPane = fxmlLoader.load();
-        root.getChildren().clear();
-        root.getChildren().add(registerPane);
-    }
-
-    public void btnReservationOnAction() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/reservation_form.fxml"));
+    public void btnReportOnAction() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/IncomeReportForm.fxml"));
         Pane registerPane = fxmlLoader.load();
         root.getChildren().clear();
         root.getChildren().add(registerPane);

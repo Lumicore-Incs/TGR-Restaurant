@@ -10,7 +10,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import lk.ijse.restaurantmanagement.db.DbConnection;
 import lk.ijse.restaurantmanagement.model.Menu;
@@ -33,7 +32,6 @@ import java.util.*;
 public class PlaceOrderFormController {
     private final ObservableList<CartTm> cartList = FXCollections.observableArrayList();
     private final String[] typeList = {"takeAway", "dineIn"};
-    private final double netTotal = 0;
     public Pane menuPane;
     public TableView<CartTm> tblMenuItem;
     public TableColumn<?, ?> colName;
@@ -43,8 +41,9 @@ public class PlaceOrderFormController {
     public JFXTextField txtTableNo;
     public JFXButton btnPlaceOrder;
     public JFXButton btnDelete;
-    @FXML
-    private AnchorPane root;
+    public JFXTextField txtSize;
+    public TableColumn<?, ?> colSize;
+
     @FXML
     private TableColumn<?, ?> colAction;
     @FXML
@@ -134,6 +133,7 @@ public class PlaceOrderFormController {
         colDate.setCellValueFactory(new PropertyValueFactory<>("date"));
         colAction.setCellValueFactory(new PropertyValueFactory<>("btnRemove"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colSize.setCellValueFactory(new PropertyValueFactory<>("size"));
     }
 
     @FXML
@@ -207,7 +207,7 @@ public class PlaceOrderFormController {
     }
 
     @FXML
-    void btnPlaceOrderOnAction() throws JRException {
+    void btnPlaceOrderOnAction(){
         if (isValidate()) {
             String orderId = txtOrderId.getText();
             String orderType = String.valueOf(cmbOrderType.getValue());
@@ -330,7 +330,7 @@ public class PlaceOrderFormController {
         txtContact.clear();
     }
 
-    public void btnReceiptOnAction() throws JRException, SQLException {
+    public void btnReceiptOnAction() throws SQLException {
         String orderId = txtOrderId.getText();
         Order order = OrderRepo.searchById(orderId);
         if (order != null) {
@@ -382,6 +382,7 @@ public class PlaceOrderFormController {
                     CartTm cartTm = new CartTm(
                             cart.getId(),
                             cart.getName(),
+                            cart.getSize(),
                             Double.parseDouble(cart.getUnitPrice())
                     );
                     tmList.add(cartTm);
@@ -407,6 +408,7 @@ public class PlaceOrderFormController {
         if (selectedItem != null) {
             txtId.setText(selectedItem.getId());
             txtName.setText(selectedItem.getName());
+            txtSize.setText(selectedItem.getSize());
             txtUnitPrice.setText(String.valueOf(selectedItem.getUnitPrice()));
             menuPane.setVisible(false);
         }

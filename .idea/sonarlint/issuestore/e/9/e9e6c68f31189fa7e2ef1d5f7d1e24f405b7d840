@@ -1,16 +1,5 @@
 
-	java:S112D"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®æì„…2J$78ebf27d-6b25-4d4d-924b-1c399b9aead9
-¤
-java:S1450'"\Remove the "customerCount" field and declare it as a local variable in the relevant methods.(å¯ßºşÿÿÿÿ8Çæì„…2J$b7a2a2fb-5c68-4ae2-b042-a116516907b1
-Ÿ
-java:S1450)"\Remove the "employeeCount" field and declare it as a local variable in the relevant methods.(àë­•8Çæì„…2J$ebdc1da4-23ee-48b6-896a-213c64a54753
- 
-java:S1450("XRemove the "itemCount" field and declare it as a local variable in the relevant methods.(­¯Ê…ûÿÿÿÿ8Èæì„…2J$6c119d88-4167-4f00-b7b0-f5b1e51a8476
 ¡
-java:S2142T"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ç±ñ„…2J$7f92abd5-7829-4446-b5b3-f17778d8e400
-p
-java:S1481X"(Remove this unused "now" local variable.(ˆ­”Úùÿÿÿÿ8ñãñ„…2J$d4379b43-8978-4fcd-a25b-2ffa3bff20ac
+java:S2142E"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ç±ñ„…2J$7d2e9f24-d229-4a8b-8ba3-64dc06b08987
 o
-java:S1602Y",Remove useless curly braces around statement(ÃÉş©8é±ñ„…2J$66cfd825-d6de-4451-9e8f-fa59edbe48c8
-u
-java:S1172n"2Remove this unused method parameter "actionEvent".(ÿ¼à«8Ñæì„…2J$0e108a4e-1bf9-4069-932d-1ae22e976b63
+java:S1602I",Remove useless curly braces around statement(ÃÉş©8é±ñ„…2J$10015676-a4c7-4e55-b0ab-45efafc119b7
