@@ -48,10 +48,16 @@
             <NumberAxis side="LEFT" />
          </yAxis>
       </BarChart>
-      <DatePicker fx:id="txtStartDate" layoutX="117.0" layoutY="112.0" />
-      <DatePicker fx:id="txtEndDate" layoutX="443.0" layoutY="112.0" />
-      <Label layoutX="34.0" layoutY="117.0" text="Start Date : " textFill="WHITE" />
-      <Label layoutX="367.0" layoutY="117.0" text="End Date : " textFill="WHITE" />
-      <Button layoutX="592.0" layoutY="153.0" mnemonicParsing="false" onAction="#getReportOnAction" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #eb9b34; -fx-background-radius: 20;" text="Get" />
+      <DatePicker fx:id="txtStartDate" layoutX="180.0" layoutY="87.0" />
+      <DatePicker fx:id="txtEndDate" layoutX="180.0" layoutY="132.0" />
+      <Label layoutX="65.0" layoutY="87.0" text="Start Date : " textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="65.0" layoutY="132.0" text="End Date : " textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Button layoutX="446.0" layoutY="128.0" mnemonicParsing="false" onAction="#getReportOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #eb9b34; -fx-background-radius: 20;" text="Get Report" />
    </children>
 </AnchorPane>
