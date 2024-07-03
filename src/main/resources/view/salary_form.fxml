@@ -7,7 +7,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantManagement.controller.SalaryFormController">
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.restaurantmanagement.controller.SalaryFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="709.0" stroke="BLACK" strokeType="INSIDE" width="1000.0" />
       <Text fill="#bf3636" layoutX="68.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary Details">
@@ -23,7 +23,7 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Text>
-      <Label layoutX="532.0" layoutY="110.0" text="EmployeeId*" textFill="WHITE">
+      <Label layoutX="410.0" layoutY="115.0" text="EmployeeId*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -38,20 +38,12 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="532.0" layoutY="217.0" text="Salary Amount*" textFill="WHITE">
+      <Label layoutX="409.0" layoutY="213.0" text="Salary Amount*" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="69.0" fitWidth="59.0" layoutX="925.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets.icon/food-png-6.png" />
-         </image>
-         <effect>
-            <ColorAdjust contrast="0.15" hue="1.0" />
-         </effect>
-      </ImageView>
-      <Label layoutX="761.0" layoutY="23.0" prefHeight="40.0" prefWidth="171.0" text="Cinnamon-7" textFill="#c64a6f">
+      <Label layoutX="662.0" layoutY="23.0" prefHeight="40.0" prefWidth="265.0" text="The Monarch Reign" textFill="#c64a6f">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>
@@ -61,45 +53,73 @@
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TableView fx:id="tblSalary" layoutX="45.0" layoutY="322.0" onMouseClicked="#tblOnClickAction" prefHeight="295.0" prefWidth="922.0" stylesheets="@../Style/TableStyleSheet.css">
+      <TableView fx:id="tblSalary" layoutX="46.0" layoutY="328.0" onMouseClicked="#tblOnClickAction" prefHeight="295.0" prefWidth="922.0" style="-fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944); -fx-background-insets: 0 11px 0 0; -fx-background-radius: 7px 7px 0px 0px; -fx-padding: 0 0 5px 0;" stylesheets="@../Style/TableStyleSheet.css">
          <columns>
-            <TableColumn fx:id="colId" prefWidth="200.0" text="SalaryId" />
-            <TableColumn fx:id="colEmployeeId" prefWidth="266.0" text="EmployeeId" />
-            <TableColumn fx:id="colAmount" prefWidth="245.0" text="Amount(Rs)" />
-            <TableColumn fx:id="colDate" prefWidth="210.0" text="Date" />
+            <TableColumn fx:id="colId" prefWidth="121.0" style="-fx-background-insets: 2px  0 3px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-radius: 0px 0px 0px 0px; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="SalaryId" />
+            <TableColumn fx:id="colEmployeeId" prefWidth="139.0" style="-fx-background-insets: 2px  0 3px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-radius: 0px 0px 0px 0px; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="EmployeeId" />
+            <TableColumn fx:id="colEmployeeName" prefWidth="209.0" style="-fx-background-insets: 2px  0 3px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-radius: 0px 0px 0px 0px; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Employee Name" />
+            <TableColumn fx:id="colAmount" prefWidth="216.0" style="-fx-background-insets: 2px  0 3px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-radius: 0px 0px 0px 0px; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Amount(Rs)" />
+            <TableColumn fx:id="colDate" prefWidth="236.0" style="-fx-background-insets: 2px  0 3px 0px; -fx-padding: 10px 0 10px 5px; -fx-background-radius: 0px 0px 0px 0px; -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);" text="Date" />
          </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="234.0" layoutY="651.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #446f85; -fx-background-radius: 15;" text="Clear" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="643.0" onAction="#btnClearOnAction" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: #446f85; -fx-background-radius: 15;" text="Clear" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="493.0" layoutY="643.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: #8f5b71; -fx-background-radius: 15;" text="Pay" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="643.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #8f5b71; -fx-background-radius: 15;" text="Pay" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="68.0" layoutY="650.0" onAction="#btnBackOnAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: grey;" text="Back" textFill="WHITE">
+      <ComboBox fx:id="cmbEmployeeId" layoutX="409.0" layoutY="148.0" onAction="#cmbEmployeeIdOnAction" prefHeight="40.0" prefWidth="172.0" promptText="Enter employeeId" />
+      <DatePicker fx:id="txtDate" layoutX="48.0" layoutY="248.0" prefHeight="40.0" prefWidth="265.0" />
+      <JFXButton buttonType="RAISED" layoutX="152.0" layoutY="643.0" onAction="#btnReceiptOnAction" prefHeight="39.0" prefWidth="134.0" style="-fx-background-color: #8f5b71; -fx-background-radius: 15;" text="Get Receipt" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <ComboBox fx:id="cmbEmployeeId" layoutX="532.0" layoutY="144.0" onAction="#cmbIdOnAction" prefHeight="45.0" prefWidth="435.0" promptText="Enter employeeId" />
-      <DatePicker fx:id="txtDate" layoutX="48.0" layoutY="248.0" prefHeight="45.0" prefWidth="435.0" />
-      <JFXButton buttonType="RAISED" layoutX="774.0" layoutY="643.0" onAction="#btnReceiptOnAction" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: #8f5b71; -fx-background-radius: 15;" text="Get Receipt" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXTextField fx:id="txtSalaryId" layoutX="48.0" layoutY="147.0" prefWidth="435.0" style="-fx-background-color: white;">
+      <JFXTextField fx:id="txtSalaryId" layoutX="48.0" layoutY="150.0" prefColumnCount="17" prefHeight="39.0" prefWidth="335.0" style="-fx-background-color: white; -fx-padding: 5px;">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtAmount" layoutX="532.0" layoutY="251.0" onKeyReleased="#txtSalaryOnKeyReleased" prefWidth="435.0" style="-fx-background-color: white;">
+      <JFXTextField fx:id="txtAmount" layoutX="409.0" layoutY="247.0" onKeyReleased="#txtSalaryOnKeyReleased" prefHeight="37.0" prefWidth="178.0" style="-fx-background-color: white; -fx-padding: 5px;">
          <font>
             <Font size="18.0" />
          </font>
       </JFXTextField>
+      <ImageView fitHeight="74.0" fitWidth="69.0" layoutX="917.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+         <effect>
+            <Blend mode="OVERLAY" />
+         </effect>
+      </ImageView>
+      <Label fx:id="lblEmployeeName" layoutX="603.0" layoutY="148.0" prefHeight="40.0" prefWidth="265.0" style="-fx-background-color: white; -fx-padding: 5px;">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="605.0" layoutY="110.0" text="Employee Name" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="714.0" layoutY="643.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #fdcb6e; -fx-background-radius: 15;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="588.0" layoutY="643.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #d63031; -fx-background-radius: 15;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="893.0" layoutY="148.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #fbc531; -fx-background-radius: 15;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

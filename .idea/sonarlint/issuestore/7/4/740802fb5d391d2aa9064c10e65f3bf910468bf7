@@ -1,0 +1,17 @@
+
+e
+java:S20951"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(≥ù÷À
+H
+java:S1172""2Remove this unused method parameter "actionEvent".(√ã€”
+R
+java:S1117B"<Rename "rootNode" which hides the field declared at line 31.(ÿÑ®î
+H
+java:S1172L"2Remove this unused method parameter "actionEvent".(åÊ—µ
+R
+java:S1117M"<Rename "rootNode" which hides the field declared at line 31.(àÍ˙∞
+D
+java:S1172X"/Remove this unused method parameter "keyEvent".(ï∞“!
+E
+java:S1172\"/Remove this unused method parameter "keyEvent".(‡ÒÙÅ
+W
+java:S1126a"AReplace this if-then-else statement by a single return statement.(“‡‰•

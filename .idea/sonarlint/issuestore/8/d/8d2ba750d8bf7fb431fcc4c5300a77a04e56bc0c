@@ -1,0 +1,24 @@
+
+†	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚ÒéüÿÿÿÿJ$37921bd7-b61f-49f7-9b16-1063ca0273f3
+l
+java:S1444H"+Make this "public static gmail" field final(€õªœÿÿÿÿÿJ$f5858b63-7126-479d-97ae-225ff20e5def
+
+java:S1117b"@Rename "customerList" which hides the field declared at line 74.(Şáƒ±øÿÿÿÿJ$4d94f863-7137-44af-b36a-5d2c186404ba
+f	java:S106y"+Replace this use of System.out by a logger.(Ğóˆ›J$7c125cc5-ecf0-4a98-8eb2-2375986e4274
+w	java:S125z"<This block of commented-out lines of code should be removed.(¾¬ÿÖJ$4552a6f4-bcf7-48d0-820a-cd0207d3c808
+¶
+java:S1130Ù"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(€ûÒJ$ffb8adb9-d5a5-4c5d-b113-9861a9df1dec
+s
+java:S1172ò"1Remove this unused method parameter "mouseEvent".(¬·æåúÿÿÿÿJ$029debbe-0d6d-4d1d-a4b3-d1fc6a780bd8
+l
+java:S1172ü"/Remove this unused method parameter "keyEvent".(ø‹ÄÊJ$c135cb2e-5263-432a-8cc5-a7aff0ee987d
+l
+java:S1172€"/Remove this unused method parameter "keyEvent".(‹–à½J$38b4365e-db0c-4ed6-bbda-ab24b816e1bc
+q
+java:S1172„"/Remove this unused method parameter "keyEvent".(¾•³ ıÿÿÿÿJ$286c1c23-d834-4e23-ba18-b885eb396502
+q
+java:S1172ˆ"/Remove this unused method parameter "keyEvent".(½ğşœøÿÿÿÿJ$d50bb3eb-8f81-41c9-86e1-1f46b969798c
+~
+java:S1126"AReplace this if-then-else statement by a single return statement.(õßÉ³J$6c4b4ef3-212e-4586-a1ba-2f28de33cc2a
+t
+java:S1172•"2Remove this unused method parameter "actionEvent".(ÅâÅŒıÿÿÿÿJ$ace5434c-ee62-46d3-acab-8e20078d9038

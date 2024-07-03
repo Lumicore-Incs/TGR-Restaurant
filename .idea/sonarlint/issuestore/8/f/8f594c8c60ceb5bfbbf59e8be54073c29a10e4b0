@@ -1,0 +1,21 @@
+
+`	java:S112g"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Ò"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+f	java:S117Y"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ÜÂƒ
+t
+java:S3012["YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ëŒ¤ªÿÿÿÿÿ
+E	java:S106{"+Replace this use of System.out by a logger.(ù”çÞÿÿÿÿÿ
+W	java:S125„"<This block of commented-out lines of code should be removed.(éìÇýÿÿÿÿÿ
+I
+java:S1172‡"2Remove this unused method parameter "actionEvent".(ÿ¼à«
+N
+java:S1172"2Remove this unused method parameter "actionEvent".(»…ä«ùÿÿÿÿ
+K
+java:S1611œ"/Remove the parentheses around the "e" parameter(·’ª‚ùÿÿÿÿ
+W	java:S125©"<This block of commented-out lines of code should be removed.( š¯åúÿÿÿÿ
+C
+java:S1172É",Remove this unused method parameter "event".(ØÂµê
+K
+java:S1172Ø"/Remove this unused method parameter "keyEvent".(ûÜªÐþÿÿÿÿ
+X
+java:S1126Ü"AReplace this if-then-else statement by a single return statement.(Íþ€“

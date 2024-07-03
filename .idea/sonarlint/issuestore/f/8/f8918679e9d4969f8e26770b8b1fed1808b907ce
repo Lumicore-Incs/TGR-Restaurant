@@ -1,0 +1,32 @@
+
+`	java:S112T"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+œ
+java:S1186s"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰Ùæíûÿÿÿÿ
+Y
+java:S1117P">Rename "tablesList" which hides the field declared at line 70.(Àé·ûÿÿÿÿ
+E	java:S106i"+Replace this use of System.out by a logger.(ù”çŞÿÿÿÿÿ
+H
+java:S1172w"2Remove this unused method parameter "actionEvent".(Œ“‘
+I
+java:S1172ˆ"2Remove this unused method parameter "actionEvent".(ÿ¼à«
+N
+java:S1172‘"2Remove this unused method parameter "actionEvent".(¿˜å•øÿÿÿÿ
+I
+java:S1172¦"2Remove this unused method parameter "actionEvent".(ŠÜÎ£
+H
+java:S1172³"2Remove this unused method parameter "actionEvent".(õİŞ7
+d	java:S100Ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ùõ™
+H
+java:S1172Ê"1Remove this unused method parameter "mouseEvent".(›Ùõ™
+N
+java:S1172Ó"2Remove this unused method parameter "actionEvent".(ÌŸúôúÿÿÿÿ
+F
+java:S1172è"/Remove this unused method parameter "keyEvent".(È«å±
+K
+java:S1172ì"/Remove this unused method parameter "keyEvent".(Ê¤ğÿÿÿÿÿ
+F
+java:S1172ğ"/Remove this unused method parameter "keyEvent".(¿˜ƒÀ
+]
+java:S1126ö"AReplace this if-then-else statement by a single return statement.(Æ®³ßùÿÿÿÿ
+H
+java:S1068G"-Remove this unused "labelList" private field.(¾€ºüÿÿÿÿ
