@@ -313,6 +313,7 @@ public class PlaceOrderFormController {
         txtUnitPrice.setText("");
         txtContact.setText("");
         txtId.setText("");
+        txtCustomerId.clear();
         txtCustomerName.setText("");
         txtNetTotal.setText("");
         txtServiceCharge.setText("");

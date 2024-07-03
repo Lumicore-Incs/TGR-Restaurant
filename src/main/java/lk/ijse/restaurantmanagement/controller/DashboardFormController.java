@@ -49,7 +49,7 @@ public class DashboardFormController {
         try {
             customerCount = CustomerRepo.getCustomerCount();
             employeeCount = EmployeeRepo.getEmployeeCount();
-            itemCount = ItemRepo.getItemCount();
+            itemCount = MenuRepo.getMenuCount();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
         }

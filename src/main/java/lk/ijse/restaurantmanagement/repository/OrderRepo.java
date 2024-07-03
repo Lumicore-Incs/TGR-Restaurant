@@ -77,6 +77,23 @@ public class OrderRepo {
         return pstm.executeUpdate()>0;
     }
 
+    public static void ordersReport(BarChart<String, Number> barChartOrders, String startDate, String endDate) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "SELECT date AS order_date, sum(total) AS price FROM Orders where date>=? && date<=? GROUP BY date ORDER BY order_date";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setObject(1,startDate);
+        pstm.setObject(2,endDate);
+        ResultSet resultSet = pstm.executeQuery();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        while (resultSet.next()) {
+            String date = resultSet.getString("order_date");
+            int ordersCount = resultSet.getInt("price");
+            series.getData().add(new XYChart.Data<>(date, ordersCount));
+        }
+        barChartOrders.getData().add(series);
+    }
+
     public String autoGenerateOrderId() throws SQLException {
         String sql = "SELECT orderId from Orders order by orderId desc limit 1";
         PreparedStatement pstm = DbConnection.getInstance().getConnection().prepareStatement(sql);
