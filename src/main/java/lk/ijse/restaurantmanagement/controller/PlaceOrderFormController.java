@@ -212,7 +212,7 @@ public class PlaceOrderFormController {
             String orderId = txtOrderId.getText();
             String orderType = String.valueOf(cmbOrderType.getValue());
             String cusId = txtCustomerId.getText();
-            String date = String.valueOf(Date.valueOf(LocalDate.now()));
+            String date = String.valueOf(txtDate.getText());
             int tableNo = 0;
             if (txtTableNo.getText() != null) {
                 tableNo = Integer.parseInt(txtTableNo.getText());
@@ -398,7 +398,6 @@ public class PlaceOrderFormController {
             } catch (SQLException e) {
                 new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
             }
-            clear();
         } else {
             initialize();
         }
